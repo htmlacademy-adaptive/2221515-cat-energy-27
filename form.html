@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Cat Energy--Form</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="shortcut icon" type="image/png" href="./images/favikon.png">
+</head>
+
+<body>
+  <header class="page-header">
+    <a class="page-header__logo" href="#">
+      <img class="page-header__logo-img" src="#" alt="Cat energy">
+    </a>
+    <nav class="page-header__main-nav">
+      <button class="main-nav__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+      <ul class="main-nav__list site-list">
+        <li class="site-list__item site-list__item--active">
+          <a href="#" class="site-list__item__link">Главная</a>
+        </li>
+        <li class="site-list__item">
+          <a href="#" class="site-list__item__link">Каталог продукции</a>
+        </li>
+        <li class="site-list__item">
+          <a class="site-list__item__link" href="#">Подбор программы</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class="main-form">
+    <section class="form-program">
+      <h1 class="form-program__title">Подбор программы</h1>
+      <span class="form-program__text">
+        Заполните анкету, и мы подберем<br>
+        программу питания для вашего кота
+      </span>
+      <div class="form-program__field">
+        <label for="enter-name">Имя:*</label>
+        <input class="field-name field" type="text" id="enter-name" name="name" placeholder="Барсик">
+      </div>
+      <div class="form-program__field">
+        <label for="enter-weight">Вес (кг):*</label>
+        <input class="field-weight field" type="number" id="enter-weight" name="weight" placeholder="7">
+      </div>
+      <div class="form-program__field">
+        <label for="enter-age">Возраст (лет):</label>
+        <input class="field-age field" type="number" id="enter-age" name="age" placeholder="7">
+      </div>
+    </section>
