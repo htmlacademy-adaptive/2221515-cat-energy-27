@@ -11,22 +11,21 @@
 <body>
   <header class="page-header">
     <a class="page-header__logo" href="#">
-      <img class="page-header__logo-img" src="/source/img/logo-mobile.svg" width="34"
-      height="38" alt="Cat energy.">
+      <img class="page-header__logo-img" src="/source/img/logo-mobile.svg" width="34" height="38" alt="Cat energy.">
     </a>
     <nav class="page-header__main-nav">
-      <button class="main-nav__toggle" type="button">
+      <button class="page-header__main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
-      <ul class="main-nav__list site-list">
-        <li class="site-list__item">
-          <a class="site-list__item__link" href="#">Главная</a>
+      <ul class="page-header__main-nav__list">
+        <li class="page-header__main-nav__item">
+          <a class="page-header__main-nav__link" href="#">Главная</a>
         </li>
-        <li class="site-list__item">
-          <a class="site-list__item__link" href="#">Каталог продукции</a>
+        <li class="page-header__main-nav__item">
+          <a class="page-header__main-nav__link" href="#">Каталог продукции</a>
         </li>
-        <li class="site-list__item">
-          <a class="site-list__item__link site-list__item--active" href="#">Подбор программы</a>
+        <li class="page-header__main-nav__item">
+          <a class="page-header__main-nav__link page-header__main-nav__link--active" href="#">Подбор программы</a>
         </li>
       </ul>
     </nav>
@@ -50,22 +49,22 @@
         <label for="enter-age">Возраст (лет):</label>
         <input class="field-age field" type="number" id="enter-age" name="age" placeholder="7">
       </div>
-      <div class="form-filter-wrapper--program">
+      <div class="form-program__weight">
         <fieldset class="form-filter">
-          <ul class="form-filter-list">
-            <li class="form-filter-item">
+          <ul class="form-filter__list">
+            <li class="form-filter__item">
               <label class="control">
                 <input class="control-input visually-hidden" type="radio" name="black" checked>
                 <span class="control-label">Похудение</span>
               </label>
             </li>
-            <li class="form-filter-item">
+            <li class="form-filter__item">
               <label class="control">
                 <input class="control-input visually-hidden" type="radio" name="black">
                 <span class="control-label">Набор массы</span>
               </label>
             </li>
-            <li class="form-filter-item">
+            <li class="form-filter__item">
               <label class="control">
                 <input class="control-input visually-hidden" type="radio" name="black">
                 <span class="control-label">Не знаю (Нужен ваш совет)</span>
@@ -90,7 +89,7 @@
       <div class="form-contact__field">
         <input class="field-about field" type="number" name="about" placeholder="Расскажите обо всех повАдках кота">
       </div>
-      <div class="form-filter-wrapper--additionally">
+      <div class="form-contact__additionally">
         <fieldset class="form-filter">
           <h2 class="form-contact__title">Дополнительно</h2>
           <ul class="form-filter-list">
@@ -127,32 +126,33 @@
   </main>
 
   <footer class="page-footer">
-    <section class="footer-cooperation">
-      <div class="cooperation__filling">
-        <div class="cooperation__filling__text">приглашаем к сотрудничеству дилеров!</div>
-        <div class="cooperation__filling__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</div>
+    <section class="page-footer-cooperation">
+      <div class="page-footer__cooperation__filling">
+        <div class="page-footer__cooperation__filling__text">приглашаем к сотрудничеству дилеров!</div>
+        <div class="page-footer__cooperation__filling__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</div>
       </div>
-      <div class="cooperation__map"></div>
+      <div class="page-footer__cooperation__map"></div>
     </section>
     <div class="page-footer__wrapper">
       <div class="page-footer__logo">
         <img src="/source/img/logo-text.svg" width="128" height="24" alt="Кэт энерджи.">
       </div>
       <div class="page-footer__social">
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--vk" href="#"></a>
+        <ul class="page-footer__social__list">
+          <li class="page-footer__social__item">
+            <a class="page-footer__social__link page-footer__social__link--vk" href="#"></a>
           </li>
-          <li class="social__item">
-            <a class="social__link social__link--yt" href="https://www.youtube.com/user/htmlacademyru"></a>
+          <li class="page-footer__social__item">
+            <a class="page-footer__social__link page-footer__social__link--yt"
+              href="https://www.youtube.com/user/htmlacademyru"></a>
           </li>
-          <li class="social__item">
-            <a class="social__link social__link--tg" href="https://t.me/htmlacademy"></a>
+          <li class="page-footer__social__item">
+            <a class="page-footer__social__link page-footer__social__link--tg" href="https://t.me/htmlacademy"></a>
           </li>
         </ul>
       </div>
       <div class="page-footer__copyright">
-        <a class="copyright__link" href="https://htmlacademy.ru/">HTML Academy</a>
+        <a class="page-footer__copyright__link" href="https://htmlacademy.ru/">HTML Academy</a>
       </div>
     </div>
   </footer>
