@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Cat energy</title>
+  <title>Cat Energy</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="shortcut icon" type="image/png" href="./images/favikon.png">
 </head>
@@ -11,8 +11,7 @@
 <body>
   <header class="page-header">
     <a class="page-header__logo" href="#">
-      <img class="page-header__logo-img" src="/source/img/logo-mobile.svg" width="34"
-      height="38" alt="Cat energy.">
+      <img class="page-header__logo-img" src="/img/logo-mobile.svg" width="34" height="38" alt="Cat energy.">
     </a>
     <nav class="page-header__main-nav">
       <button class="page-header__main-nav__toggle" type="button">
@@ -31,18 +30,20 @@
       </ul>
     </nav>
   </header>
+
   <main class="main-index">
-    <section class="main-index__program">
-      <h1 class="main-index__program__title">Функциональное
-        питание для котов</h1>
-      <p class="main-index__program__text">Занялся собой? Займись котом!</p>
-      <div class="main-index__program__logo">
-        <img class="main-index__program__logo-img" src="/source/img/cat-energy-mobile.png" alt="Упаковка Cat Energy 500 грамм.">
-      </div>
-      <div class="primary-button">
-        <button class="choose-program" type="button">Подобрать программу</button>
-      </div>
-    </section>
+    <div class="main-index__program--wrapper">
+      <section class="main-index__program">
+        <h1 class="main-index__program__title">Функциональное
+          питание для котов</h1>
+        <p class="main-index__program__text">Занялся собой? Займись котом!</p>
+        <div class="main-index__program__logo">
+          <img class="main-index__program__logo-img" src="/img/cat-energy-mobile.png"
+            alt="Упаковка Cat Energy 500 грамм.">
+        </div>
+        <button class="primary-button" type="button">Подобрать программу</button>
+      </section>
+    </div>
     <section class="main-servises">
       <ul class="main-servises__list">
         <li class="main-servises__item">
@@ -107,23 +108,25 @@
       </div>
     </section>
     <section class="example">
-      <h2 class="example__title">Живой пример</h2>
-      <span class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм
-        на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих
-        привычек и по-прежнему спит по 16 часов в день.
-      </span>
-      <ul class="example__info">
-        <li class="example__info__mean">5 кг</li>
-        <li class="example__info__description">снижение веса</li>
-      </ul>
-      <ul class="example__info">
-        <li class="example__info__mean">60 дней</li>
-        <li class="example__info__description">затрачено времени</li>
-      </ul>
-      <span class="example__conclusion">Затраты на питание: 15 000 РУБ.</span>
-      <div class="example__compare-slider">
-        <img src="/source/img/fat-cat.png" alt="Толстый кот.">
-        <img src="/source/img/thin-cat.png" alt="Худой кот.">
+      <div class="example--filling">
+        <h2 class="example__title">Живой пример</h2>
+        <span class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм
+          на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих
+          привычек и по-прежнему спит по 16 часов в день.
+        </span>
+        <ul class="example__info">
+          <li class="example__info__mean">5 кг</li>
+          <li class="example__info__description">снижение веса</li>
+        </ul>
+        <ul class="example__info">
+          <li class="example__info__mean">60 дней</li>
+          <li class="example__info__description">затрачено времени</li>
+        </ul>
+        <span class="example__conclusion">Затраты на питание: 15 000 РУБ.</span>
+        <div class="example__compare-slider">
+          <img src="/img/fat-cat.png" alt="Толстый кот.">
+          <img src="/img/thin-cat.png" alt="Худой кот.">
+        </div>
       </div>
     </section>
   </main>
@@ -131,14 +134,14 @@
   <footer class="page-footer">
     <section class="page-footer-cooperation">
       <div class="page-footer__cooperation__filling">
-        <div class="page-footer__cooperation__filling__text">приглашаем к сотрудничеству дилеров!</div>
+        <div class="page-footer__cooperation__filling__text">приглашаем<br>к сотрудничеству<br>дилеров!</div>
         <div class="page-footer__cooperation__filling__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</div>
       </div>
       <div class="page-footer__cooperation__map"></div>
     </section>
     <div class="page-footer__wrapper">
       <div class="page-footer__logo">
-        <img src="/source/img/logo-text.svg" width="128" height="24" alt="Кэт энерджи.">
+        <img src="/img/logo-text.svg" width="128" height="24" alt="Кэт энерджи.">
       </div>
       <div class="page-footer__social">
         <ul class="page-footer__social__list">
@@ -146,7 +149,8 @@
             <a class="page-footer__social__link page-footer__social__link--vk" href="#"></a>
           </li>
           <li class="page-footer__social__item">
-            <a class="page-footer__social__link page-footer__social__link--yt" href="https://www.youtube.com/user/htmlacademyru"></a>
+            <a class="page-footer__social__link page-footer__social__link--yt"
+              href="https://www.youtube.com/user/htmlacademyru"></a>
           </li>
           <li class="page-footer__social__item">
             <a class="page-footer__social__link page-footer__social__link--tg" href="https://t.me/htmlacademy"></a>
