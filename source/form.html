@@ -4,32 +4,33 @@
 <head>
   <meta charset="utf-8">
   <title>Cat Energy--Form</title>
-  <link rel="stylesheet" href="styles/styles.css">
-  <link rel="shortcut icon" type="image/png" href="./images/favikon.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" type="image/png" href="./img/favikon.png">
 </head>
 
 <body>
   <header class="page-header">
     <a class="page-header__logo" href="#">
-      <img class="page-header__logo-img" src="/source/img/logo-mobile.svg" width="34" height="38" alt="Cat energy.">
+      <img class="page-header__logo-img" src="/img/logo-mobile.svg" width="34" height="38" alt="Cat energy.">
     </a>
-    <nav class="page-header__main-nav">
-      <button class="page-header__main-nav__toggle" type="button">
+    <nav class="page-header__main-nav main-nav">
+      <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
-      <ul class="page-header__main-nav__list">
-        <li class="page-header__main-nav__item">
-          <a class="page-header__main-nav__link" href="#">Главная</a>
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#">Главная</a>
         </li>
-        <li class="page-header__main-nav__item">
-          <a class="page-header__main-nav__link" href="#">Каталог продукции</a>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#">Каталог продукции</a>
         </li>
-        <li class="page-header__main-nav__item">
-          <a class="page-header__main-nav__link page-header__main-nav__link--active" href="#">Подбор программы</a>
+        <li class="main-nav__item">
+          <a class="main-nav__link main-nav__link--active" href="#">Подбор программы</a>
         </li>
       </ul>
     </nav>
   </header>
+
   <main class="main-form">
     <section class="form-program">
       <h1 class="form-program__title">Подбор программы</h1>
@@ -75,7 +76,7 @@
       </div>
     </section>
     <section class="form-contact">
-      <h2 class="form-contact__title">Контактные данные (владельца кота)</h2>
+      <h2 class="form-contact__title">Контактные данные<br>(владельца кота)</h2>
       <div class="form-contact__field">
         <label for="enter-email">E-mail:*</label>
         <input class="field-name field" type="text" id="enter-email" name="email" placeholder="kuklachev@gmail.com">
@@ -87,7 +88,7 @@
       </div>
       <h2 class="form-contact__title">Комментарий</h2>
       <div class="form-contact__field">
-        <input class="field-about field" type="number" name="about" placeholder="Расскажите обо всех повАдках кота">
+        <input class="field-about field" type="text" name="about" placeholder="Расскажите обо всех повАдках кота">
       </div>
       <div class="form-contact__additionally">
         <fieldset class="form-filter">
@@ -118,7 +119,7 @@
               </label>
             </li>
           </ul>
-          <button class="primary-button">Отправить заявку</button>
+          <button class="button button--primary">Отправить заявку</button>
           <span class="required-fields">* — Обязательные поля</span>
         </fieldset>
       </div>
@@ -126,33 +127,32 @@
   </main>
 
   <footer class="page-footer">
-    <section class="page-footer-cooperation">
-      <div class="page-footer__cooperation__filling">
-        <div class="page-footer__cooperation__filling__text">приглашаем к сотрудничеству дилеров!</div>
-        <div class="page-footer__cooperation__filling__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</div>
+    <section class="page-footer__cooperation coop">
+      <div class="coop__filling coop-filling">
+        <div class="coop-filling__text">приглашаем<br>к сотрудничеству<br>дилеров!</div>
+        <div class="coop-filling__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</div>
       </div>
-      <div class="page-footer__cooperation__map"></div>
+      <div class="coop__map"></div>
     </section>
     <div class="page-footer__wrapper">
       <div class="page-footer__logo">
-        <img src="/source/img/logo-text.svg" width="128" height="24" alt="Кэт энерджи.">
+        <img src="/img/logo-text.svg" width="128" height="24" alt="Кэт энерджи.">
       </div>
-      <div class="page-footer__social">
-        <ul class="page-footer__social__list">
-          <li class="page-footer__social__item">
-            <a class="page-footer__social__link page-footer__social__link--vk" href="#"></a>
+      <div class="page-footer__social social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--vk" href="#"></a>
           </li>
-          <li class="page-footer__social__item">
-            <a class="page-footer__social__link page-footer__social__link--yt"
-              href="https://www.youtube.com/user/htmlacademyru"></a>
+          <li class="social__item">
+            <a class="social__link social__link--yt" href="https://www.youtube.com/user/htmlacademyru"></a>
           </li>
-          <li class="page-footer__social__item">
-            <a class="page-footer__social__link page-footer__social__link--tg" href="https://t.me/htmlacademy"></a>
+          <li class="social__item">
+            <a class="social__link social__link--tg" href="https://t.me/htmlacademy"></a>
           </li>
         </ul>
       </div>
-      <div class="page-footer__copyright">
-        <a class="page-footer__copyright__link" href="https://htmlacademy.ru/">HTML Academy</a>
+      <div class="page-footer__copyright copyright">
+        <a class="copyright__link" href="https://htmlacademy.ru/">HTML Academy</a>
       </div>
     </div>
   </footer>
