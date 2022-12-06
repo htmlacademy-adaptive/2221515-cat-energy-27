@@ -1,5 +1,9 @@
 .page-header {
-  margin: 0 20px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 320px;
+  box-sizing: border-box;
 }
 
 .main-nav__list {
@@ -16,5 +20,20 @@
 
 .main-nav__link {
   text-decoration: none;
-  color: #000000;
+  color: var(--basicBlackColor);
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__list {
+    display: flex;
+  }
+
+  .page-header {
+    min-width: @tablet-width;
+    padding: 0 30px;
+  }
 }

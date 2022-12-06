@@ -3,7 +3,7 @@
 }
 
 .main-index__program-wrapper {
-  background-color: rgba(104, 183, 56, 0.85);
+  background-color: var(--thirdBackgrColor);
   // background-color: linear-gradient(#67b637 60%, #ffffff 60% 100%);
 }
 
@@ -11,8 +11,8 @@
   font-family: "oswald-medium", sans-serif;
   font-style: normal;
   font-weight: 400;
-  color: #ffffff;
-  margin: 0 20px;
+  color: var(--basicWhiteColor);
+  padding: 0 20px;
 }
 
 .program__title {
@@ -26,4 +26,30 @@
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .main-index {
+    max-width: @tablet-width;
+  }
+
+  .main-index__program-wrapper {
+    background-color: var(--basicWhiteColor);
+  }
+
+  .main-index__program {
+    color: var(--basicBlackColor);
+    height: 800px;
+    padding: 0 30px;
+  }
+
+  .program__title {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .program__text {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
