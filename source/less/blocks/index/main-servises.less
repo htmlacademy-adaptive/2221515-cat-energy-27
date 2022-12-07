@@ -65,3 +65,36 @@
     height: 372px;
   }
 }
+
+@media (min-width: @desktop-width) {
+  .main-servises {
+    max-width: @desktop-width;
+    padding: 0 110px;
+  }
+
+  .servise__title {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .servise__text {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .main-servises__list {
+    display: flex;
+  }
+
+  .main-servises__item {
+    width: 50%;
+  }
+
+  .main-servises__item + .main-servises__item:last-child {
+    margin-left: 80px;
+  }
+
+  .main-servises__link {
+    height: 374px;
+  }
+}

@@ -1,5 +1,5 @@
 .page-header {
-  padding: 0 20px;
+  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   max-width: 320px;
@@ -34,6 +34,21 @@
 
   .page-header {
     min-width: @tablet-width;
-    padding: 0 30px;
+    padding: 42px 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__list {
+    display: flex;
+  }
+
+  .page-header {
+    min-width: @desktop-width;
+    padding: 69px 110px;
   }
 }

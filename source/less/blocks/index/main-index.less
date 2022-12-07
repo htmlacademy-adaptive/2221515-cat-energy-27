@@ -3,8 +3,7 @@
 }
 
 .main-index__program-wrapper {
-  background-color: var(--thirdBackgrColor);
-  // background-color: linear-gradient(#67b637 60%, #ffffff 60% 100%);
+  background-image: linear-gradient(var(--thirdBackgrColor) 60%, var(--basicWhiteColor) 60% 100%);
 }
 
 .main-index__program {
@@ -34,7 +33,7 @@
   }
 
   .main-index__program-wrapper {
-    background-color: var(--basicWhiteColor);
+    background-image: var(--basicWhiteColor);
   }
 
   .main-index__program {
@@ -51,5 +50,21 @@
   .program__text {
     font-size: 20px;
     line-height: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-index {
+    max-width: @desktop-width;
+  }
+
+  .main-index__program-wrapper {
+    background-image: var(--basicWhiteColor);
+  }
+
+  .main-index__program {
+    color: var(--basicBlackColor);
+    height: 600px;
+    padding: 0 110px;
   }
 }
