@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cat Energy--Form</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" type="image/png" href="./img/favikon.png">
+  <base href="https://htmlacademy-adaptive.github.io/2221515-cat-energy-27/5/">
+</head>
+
+<body>
+  <header class="page-header">
+    <a class="page-header__logo" href="#">
+      <img class="page-header__logo-img" src="/img/logo-mobile.svg" width="34" height="38" alt="Cat energy.">
+    </a>
+    <nav class="page-header__main-nav main-nav">
+      <button class="main-nav__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#">Главная</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#">Каталог продукции</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link main-nav__link--active" href="#">Подбор программы</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main-form">
+    <section class="form-program">
+      <h1 class="form-program__title">Подбор программы</h1>
+      <span class="form-program__text">
+        Заполните анкету, и мы подберем<br>
+        программу питания для вашего кота
+      </span>
+      <div class="form-program__fields-wrapper">
+        <div class="form-program__fields">
+          <div class="form-program__field">
+            <label for="enter-name">Имя:*</label>
+            <input class="field-name field" type="text" id="enter-name" name="name" placeholder="Барсик">
+          </div>
+          <div class="form-program__field">
+            <label for="enter-weight">Вес (кг):*</label>
+            <input class="field-weight field" type="number" id="enter-weight" name="weight" placeholder="7">
+          </div>
+          <div class="form-program__field">
+            <label for="enter-age">Возраст (лет):</label>
+            <input class="field-age field" type="number" id="enter-age" name="age" placeholder="7">
+          </div>
+        </div>
+        <div class="form-program__weight">
+          <fieldset class="form-filter">
+            <ul class="form-filter__list">
+              <li class="form-filter__item">
+                <label class="control">
+                  <input class="control-input visually-hidden" type="radio" name="black" checked>
+                  <span class="control-label">Похудение</span>
+                </label>
+              </li>
+              <li class="form-filter__item">
+                <label class="control">
+                  <input class="control-input visually-hidden" type="radio" name="black">
+                  <span class="control-label">Набор массы</span>
+                </label>
+              </li>
+              <li class="form-filter__item">
+                <label class="control">
+                  <input class="control-input visually-hidden" type="radio" name="black">
+                  <span class="control-label">Не знаю (Нужен ваш совет)</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+      </div>
+    </section>
+    <section class="form-contact">
+      <h2 class="form-contact__title">Контактные данные<br>(владельца кота)</h2>
+      <div class="form-contact__fields">
+        <div class="form-contact__field">
+          <label for="enter-email">E-mail:*</label>
+          <input class="field-name field" type="text" id="enter-email" name="email" placeholder="kuklachev@gmail.com">
+        </div>
+        <div class="form-contact__field">
+          <label for="enter-phone-number">Телефон:*</label>
+          <input class="field-weight field" type="number" id="enter-phone-number" name="phone-number"
+            placeholder="8 (960) 900-60-90">
+        </div>
+      </div>
+      <h2 class="form-contact__title">Комментарий</h2>
+      <div class="form-contact__field form-about">
+        <input class="field-about field" type="text" name="about" placeholder="Расскажите обо всех повАдках кота">
+      </div>
+      <div class="form-contact__additionally">
+        <fieldset class="form-filter">
+          <h2 class="form-contact__title">Дополнительно</h2>
+          <ul class="form-filter-list">
+            <li class="form-filter-item">
+              <label class="control">
+                <input class="control-input visually-hidden" type="checkbox" name="sweetener" checked>
+                <span class="control-label">сахарозаменитель</span>
+              </label>
+            </li>
+            <li class="form-filter-item">
+              <label class="control">
+                <input class="control-input visually-hidden" type="checkbox" name="drinking water">
+                <span class="control-label">питьевая вода</span>
+              </label>
+            </li>
+            <li class="form-filter-item">
+              <label class="control">
+                <input class="control-input visually-hidden" type="checkbox" name="milk">
+                <span class="control-label">молоко</span>
+              </label>
+            </li>
+            <li class="form-filter-item">
+              <label class="control">
+                <input class="control-input visually-hidden" type="checkbox" name="vitamins">
+                <span class="control-label">витамины</span>
+              </label>
+            </li>
+          </ul>
+          <button class="button button--primary">Отправить заявку</button>
+          <span class="required-fields">* — Обязательные поля</span>
+        </fieldset>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <section class="page-footer__cooperation coop">
+      <div class="coop__filling coop-filling">
+        <div class="coop-filling__text">приглашаем<br>к сотрудничеству<br>дилеров!</div>
+        <div class="coop-filling__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</div>
+      </div>
+      <div class="coop__map"></div>
+    </section>
+    <div class="page-footer__social-wrapper">
+      <div class="page-footer__logo">
+        <img src="/img/logo-text.svg" width="128" height="24" alt="Кэт энерджи.">
+      </div>
+      <div class="page-footer__social social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--vk" href="#"></a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--yt" href="https://www.youtube.com/user/htmlacademyru"></a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--tg" href="https://t.me/htmlacademy"></a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-footer__copyright copyright">
+        <a class="copyright__link" href="https://htmlacademy.ru/">HTML Academy</a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
