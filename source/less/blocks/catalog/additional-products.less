@@ -11,6 +11,7 @@
 }
 
 .additional-products {
+  box-sizing: border-box;
   max-width: 320px;
   padding: 0 20px;
 }
@@ -49,13 +50,34 @@
 }
 
 .additional-products__get-all {
-  background-color: var(--thirdBackgrColor);
-  height: 290px;
+  position: relative;
   text-align: center;
+  z-index: 1;
+}
+
+.additive-get-all-background {
+  width: 280px;
+  height: 290px;
+  background-color: var(--thirdBackgrColor);
+}
+
+.additive-get-all-background::before {
+  position: absolute;
+  content: "";
+  background: url("/img/background-cat-case-mobile.jpg") no-repeat 50% 50%;
+  top: 0;
+  right: 0;
+  width: 280px;
+  height: 290px;
+  z-index: -1;
 }
 
 .additive-get-all__text {
   .lato();
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 22%;
   color: var(--basicWhiteColor);
   font-size: 16px;
   line-height: 20px;
@@ -91,6 +113,25 @@
   .additional-products__list {
     margin-bottom: 69px;
   }
+
+  .additive-get-all-background {
+    width: 707px;
+    height: 200px;
+  }
+
+  .additive-get-all-background::before {
+    background: url("/img/background-cat-case-tablet.jpg") no-repeat 50% 50%;
+    top: 0;
+    right: 0;
+    width: 707px;
+    height: 200px;
+  }
+
+  .additive-get-all__text {
+    top: 33%;
+    right: 22%;
+    text-align: left;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -116,5 +157,24 @@
   .additional-products__list {
     width: 70%;
     margin-bottom: 86px;
+  }
+
+  .additive-get-all-background {
+    width: 245px;
+    height: 289px;
+  }
+
+  .additive-get-all-background::before {
+    background: url("/img/background-cat-case-desktop.jpg") no-repeat 50% 50%;
+    top: 0;
+    right: 0;
+    width: 245px;
+    height: 289px;
+  }
+
+  .additive-get-all__text {
+    top: 50%;
+    right: 22%;
+    text-align: center;
   }
 }
