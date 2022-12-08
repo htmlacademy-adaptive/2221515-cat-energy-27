@@ -3,7 +3,27 @@
 }
 
 .main-index__program-wrapper {
-  background-image: linear-gradient(var(--thirdBackgrColor) 60%, var(--basicWhiteColor) 60% 100%);
+  position: relative;
+}
+
+.program-wrapper__background {
+  position: absolute;
+  content: "";
+  background-image: url(/img/background-cat-mobile.jpg);
+  width: 320px;
+  height: 302px;
+  background-repeat: no-repeat;
+  background-position: right 0 top 0;
+  z-index: -2;
+}
+
+.program-wrapper__background::before {
+  position: absolute;
+  content: "";
+  width: 320px;
+  height: 302px;
+  background-color: var(--thirdBackgrColor);
+  z-index: -1;
 }
 
 .main-index__program {
@@ -32,6 +52,10 @@
     max-width: @tablet-width;
   }
 
+  .program-wrapper__background {
+    display: none;
+  }
+
   .main-index__program-wrapper {
     background-image: var(--basicWhiteColor);
   }
@@ -56,6 +80,26 @@
 @media (min-width: @desktop-width) {
   .main-index {
     max-width: @desktop-width;
+  }
+
+  .program-wrapper__background {
+    display: flex;
+    background-image: url(/img/background-cat-desktop.jpg);
+    justify-content: right;
+    width: 720px;
+    height: 694px;
+    padding-left: 600px;
+    top: -150px;
+    right: 0;
+  }
+
+  .program-wrapper__background::before {
+    position: absolute;
+    content: "";
+    width: 720px;
+    height: 694px;
+    background-color: var(--thirdBackgrColor);
+    z-index: -1;
   }
 
   .main-index__program-wrapper {
