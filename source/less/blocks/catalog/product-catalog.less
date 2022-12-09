@@ -12,6 +12,7 @@
 
 .product-catalog {
   padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .product-catalog__title {
@@ -19,7 +20,7 @@
   font-size: 36px;
   line-height: 36px;
   color: #000000;
-  margin: 27px 20px 41px 20px;
+  margin: 27px 0 41px 0;
   padding: 0;
 }
 
@@ -78,7 +79,6 @@
 
 @media (min-width: @tablet-width) {
   .product-catalog {
-    min-width: @tablet-width;
     padding: 0 30px;
   }
 
@@ -122,7 +122,7 @@
 
 @media (min-width: @desktop-width) {
   .product-catalog {
-    min-width: @desktop-width;
+    min-width: 1440px;
     padding: 0 110px;
   }
 
