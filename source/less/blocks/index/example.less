@@ -1,12 +1,13 @@
 .example {
-  padding: 0 20px;
   background-color: var(--secondaryBackgrColor);
 }
 
-.example--filling {
-  margin: 20px 20px;
+.example-filling {
+  margin: 0 auto;
   display: block;
   justify-content: center;
+  padding: 0 20px;
+  max-width: 320px;
 }
 
 .example__title {
@@ -65,8 +66,12 @@
 
 @media (min-width: @tablet-width) {
   .example {
-    padding: 0 30px;
     background-image: linear-gradient(var(--basicWhiteColor) 60%, var(--secondaryBackgrColor) 60% 100%);
+  }
+
+  .example-filling {
+    max-width: @tablet-width;
+    padding: 0 30px;
   }
 
   .example__title {
@@ -97,9 +102,12 @@
 
 @media (min-width: @desktop-width) {
   .example {
+    background-image: linear-gradient(var(--basicWhiteColor) 60%, var(--secondaryBackgrColor) 60% 100%);
+  }
+
+  .example-filling {
     max-width: @desktop-width;
     padding: 0 110px;
-    background-image: linear-gradient(var(--basicWhiteColor) 60%, var(--secondaryBackgrColor) 60% 100%);
   }
 
   .example__title {
