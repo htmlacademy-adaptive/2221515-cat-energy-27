@@ -1,5 +1,10 @@
 .page-header {
-  margin: 0 20px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 320px;
+  box-sizing: border-box;
+  margin: 0 auto;
 }
 
 .main-nav__list {
@@ -16,5 +21,39 @@
 
 .main-nav__link {
   text-decoration: none;
-  color: #000000;
+  color: var(--basicBlackColor);
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__list {
+    display: flex;
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .page-header {
+    min-width: @tablet-width;
+    padding: 42px 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__list {
+    display: flex;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .page-header {
+    min-width: @desktop-width;
+    padding: 69px 110px;
+  }
 }

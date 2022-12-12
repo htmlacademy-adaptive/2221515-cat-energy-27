@@ -1,5 +1,7 @@
 .general-info {
-  margin: 20px 20px;
+  padding: 30px 20px;
+  margin: 0 auto;
+  max-width: 320px;
 }
 
 .general-info__title {
@@ -12,10 +14,19 @@
   margin: 0;
 }
 
-.general-info__item {
+.general-info__list {
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+.general-info__item {
+  margin: 0;
+  margin-top: 20px;
+  padding: 0;
+  list-style-type: none;
+  height: 60px;
+  box-sizing: border-box;
 }
 
 .info-card__text {
@@ -24,4 +35,62 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
+}
+
+@media (min-width: @tablet-width) {
+  .general-info {
+    max-width: @tablet-width;
+    padding: 30px 30px;
+  }
+
+  .general-info__item {
+    height: 280px;
+    padding-right: 135px;
+    padding-top: 200px;
+    max-width: 50%;
+  }
+
+  .general-info__list {
+    flex-wrap: wrap;
+    display: flex;
+  }
+
+  .general-info__title {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .info-card__text {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .general-info {
+    max-width: @desktop-width;
+    padding: 30px 110px;
+  }
+
+  .general-info__item {
+    height: 280px;
+    padding-right: 0;
+    padding-top: 200px;
+    max-width: 100%;
+  }
+
+  .general-info__list {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+  }
+
+  .general-info__title {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .info-card__text {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }

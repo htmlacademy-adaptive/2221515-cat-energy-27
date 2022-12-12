@@ -11,11 +11,13 @@
 }
 
 .additional-products {
-  margin: 20px 20px;
+  box-sizing: border-box;
+  padding: 0 20px;
 }
 
 .additional-products__list {
   margin: 0;
+  margin-bottom: 35px;
   padding: 0;
   list-style-type: none;
 }
@@ -25,6 +27,7 @@
   font-size: 24px;
   line-height: 24px;
   margin: 0;
+  padding: 25px 0 36px 0;
 }
 
 .additive__title {
@@ -41,18 +44,136 @@
   line-height: 14px;
   list-style-type: none;
   padding: 0;
+  display: flex;
+  justify-content: space-between;
 }
 
 .additional-products__get-all {
-  background-color: var(--thirdBackgrColor);
-  height: 290px;
+  position: relative;
   text-align: center;
-  margin: 35px 0;
+  z-index: 1;
+}
+
+.additive-get-all-background {
+  width: 280px;
+  height: 290px;
+  background-color: var(--thirdBackgrColor);
+}
+
+.additive-get-all-background::before {
+  position: absolute;
+  content: "";
+  background: url("/img/background-cat-case-mobile.jpg") no-repeat 50% 50%;
+  top: 0;
+  right: 0;
+  width: 280px;
+  height: 290px;
+  z-index: -1;
 }
 
 .additive-get-all__text {
   .lato();
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 22%;
   color: var(--basicWhiteColor);
   font-size: 16px;
   line-height: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .additional-products {
+    min-width: @tablet-width;
+    padding: 0 30px;
+  }
+
+  .additional-products__title {
+    font-size: 36px;
+    line-height: 36px;
+    padding: 68px 0 80px 0;
+  }
+
+  .additive__title {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .additive__list {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .additional-products__card-filling {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .additional-products__list {
+    margin-bottom: 69px;
+  }
+
+  .additive-get-all-background {
+    width: 707px;
+    height: 200px;
+  }
+
+  .additive-get-all-background::before {
+    background: url("/img/background-cat-case-tablet.jpg") no-repeat 50% 50%;
+    top: 0;
+    right: 0;
+    width: 707px;
+    height: 200px;
+  }
+
+  .additive-get-all__text {
+    top: 33%;
+    right: 22%;
+    text-align: left;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .additional-products {
+    min-width: @desktop-width;
+    padding: 0 110px;
+  }
+
+  .additional-products__title {
+    padding: 75px 0 81px 0;
+  }
+
+  .additional-products-filling {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .additional-products__card-filling {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .additional-products__list {
+    width: 70%;
+    margin-bottom: 86px;
+  }
+
+  .additive-get-all-background {
+    width: 245px;
+    height: 289px;
+  }
+
+  .additive-get-all-background::before {
+    background: url("/img/background-cat-case-desktop.jpg") no-repeat 50% 50%;
+    top: 0;
+    right: 0;
+    width: 245px;
+    height: 289px;
+  }
+
+  .additive-get-all__text {
+    top: 50%;
+    right: 22%;
+    text-align: center;
+  }
 }

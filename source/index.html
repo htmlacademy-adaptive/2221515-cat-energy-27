@@ -3,12 +3,13 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cat Energy</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="shortcut icon" type="image/png" href="./images/favikon.png">
 </head>
 
-<body>
+<body class="body-main">
   <header class="page-header">
     <a class="page-header__logo" href="#">
       <img class="page-header__logo-img" src="/img/logo-mobile.svg" width="34" height="38" alt="Cat energy.">
@@ -33,12 +34,14 @@
 
   <main class="main-index">
     <div class="main-index__program-wrapper">
+      <div class="program-wrapper__background">
+      </div>
       <section class="main-index__program program">
-        <h1 class="program__title">Функциональное
-          питание для котов</h1>
+        <h1 class="program__title">Функциональное<br>питание для котов</h1>
         <p class="program__text">Занялся собой? Займись котом!</p>
         <div class="program__logo">
-          <img class="program__logo-img" src="/img/cat-energy-mobile.png" alt="Упаковка Cat Energy 500 грамм.">
+          <img class="program__logo-img" src="/img/hero-mobile.png" alt="Упаковка Cat Energy 500 грамм." width="280"
+            height="270">
         </div>
         <button class="button button--primary" type="button">Подобрать программу</button>
       </section>
@@ -138,25 +141,27 @@
       </div>
       <div class="coop__map"></div>
     </section>
-    <div class="page-footer__wrapper">
-      <div class="page-footer__logo">
-        <img src="/img/logo-text.svg" width="128" height="24" alt="Кэт энерджи.">
-      </div>
-      <div class="page-footer__social social">
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--vk" href="#"></a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--yt" href="https://www.youtube.com/user/htmlacademyru"></a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--tg" href="https://t.me/htmlacademy"></a>
-          </li>
-        </ul>
-      </div>
-      <div class="page-footer__copyright copyright">
-        <a class="copyright__link" href="https://htmlacademy.ru/">HTML Academy</a>
+    <div class="page-footer__social-container">
+      <div class="page-footer__social-wrapper">
+        <div class="page-footer__logo">
+          <img src="/img/logo-text.svg" width="128" height="24" alt="Кэт энерджи.">
+        </div>
+        <div class="page-footer__social social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--vk" href="#"></a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--yt" href="https://www.youtube.com/user/htmlacademyru"></a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--tg" href="https://t.me/htmlacademy"></a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__copyright copyright">
+          <a class="copyright__link" href="https://htmlacademy.ru/">HTML Academy</a>
+        </div>
       </div>
     </div>
   </footer>
