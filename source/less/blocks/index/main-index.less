@@ -6,6 +6,7 @@
   position: absolute;
   content: "";
   background-image: url("/img/background-cat-mobile.jpg");
+  background-color: var(--fourthBackgrColor);
   width: 100%;
   height: 302px;
   background-repeat: no-repeat;
@@ -75,22 +76,28 @@
 @media (min-width: @desktop-width) {
   .program-wrapper__background {
     display: flex;
-    background-image: url("/img/background-cat-desktop.jpg");
-    justify-content: right;
-    width: 720px;
+    background-image: linear-gradient(to right, var(--basicWhiteColor) 50%, var(--fourthBackgrColor) 50% 100%);
     height: 694px;
     top: -150px;
-    right: 0;
-  }
 
-  .program-wrapper__background::before {
-    position: absolute;
-    content: "";
-    width: 720px;
-    height: 694px;
-    background-color: var(--thirdBackgrColor);
-    z-index: -1;
-    right: 0;
+    &::before {
+      position: absolute;
+      content: "";
+      height: 694px;
+      background-color: var(--thirdBackgrColor);
+      z-index: -1;
+      left: 50%;
+      width: 50%;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      height: 694px;
+      width: 100%;
+      background: url("/img/background-cat-desktop.jpg") no-repeat right 0 top 0;
+      z-index: -2;
+    }
   }
 
   .main-index__program-wrapper {

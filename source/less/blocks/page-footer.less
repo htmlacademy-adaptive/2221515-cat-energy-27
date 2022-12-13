@@ -6,6 +6,8 @@
 .coop-filling {
   display: flex;
   justify-content: space-between;
+  max-width: 320px;
+  margin: 0 auto;
 }
 
 .coop-filling__text {
@@ -79,6 +81,12 @@
   .coop-filling__adress {
     font-size: 16px;
   }
+
+  .coop-filling {
+    margin: 0 auto;
+    max-width: @tablet-width;
+    padding: 0 70px;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -98,6 +106,7 @@
   }
 
   .coop-filling {
+    max-width: @desktop-width;
     display: flex;
     justify-content: left;
   }
