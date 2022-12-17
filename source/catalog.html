@@ -11,19 +11,21 @@
 
 <body class="body-main">
   <header class="page-header">
-    <a class="page-header__logo" href="#">
-      <img class="page-header__logo-img" src="/img/logo-mobile.svg" width="34" height="38" alt="Cat energy.">
-    </a>
-    <nav class="page-header__main-nav main-nav">
+    <div class="page-header__logo-wrapper">
+      <a class="page-header__logo" href="#">
+        <img class="page-header__logo-img" src="../img/logo-mobile.svg" width="34" height="38" alt="Cat energy.">
+      </a>
+    </div>
+    <nav class="page-header__main-nav main-nav--closed main-nav main-nav--nojs">
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
       <ul class="main-nav__list">
         <li class="main-nav__item">
-          <a class="main-nav__link" href="#">Главная</a>
+          <a class="main-nav__link main-nav__link--active" href="#">Главная</a>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link main-nav__link--active" href="#">Каталог продукции</a>
+          <a class="main-nav__link" href="#">Каталог продукции</a>
         </li>
         <li class="main-nav__item">
           <a class="main-nav__link" href="#">Подбор программы</a>
@@ -38,7 +40,7 @@
         <h1 class="product-catalog__title">Каталог продукции</h1>
         <ul class="product-catalog__list">
           <li class="product-catalog__item product-card">
-            <img src="/img/catalog-chicken500.png" width="140" height="112" alt="Курица 500 грамм."
+            <img src="../img/catalog-chicken500.png" width="140" height="112" alt="Курица 500 грамм."
               class="product-card__image">
             <div class="product-card__field">
               <p class="product-card__title">Cat Energy PRO 500 г</p>
@@ -56,7 +58,7 @@
             <button class="button button--primary">заказать</button>
           </li>
           <li class="product-catalog__item product-card">
-            <img src="/img/catalog-chicken1000.png" width="140" height="112" alt="Курица 1 килограмм."
+            <img src="../img/catalog-chicken1000.png" width="140" height="112" alt="Курица 1 килограмм."
               class="product-card__image">
             <div class="product-card__field">
               <p class="product-card__title">Cat Energy PRO 1000 г</p>
@@ -74,7 +76,7 @@
             <button class="button button--primary">заказать</button>
           </li>
           <li class="product-catalog__item product-card">
-            <img src="/img/catalog-fish500.png" width="140" height="112" alt="Рыба 500 грамм."
+            <img src="../img/catalog-fish500.png" width="140" height="112" alt="Рыба 500 грамм."
               class="product-card__image">
             <div class="product-card__field">
               <p class="product-card__title">Cat Energy PRO 500 г</p>
@@ -92,7 +94,7 @@
             <button class="button button--primary">заказать</button>
           </li>
           <li class="product-catalog__item product-card">
-            <img src="/img/catalog-fish1000.png" width="140" height="112" alt="Рыба 1 килограмм."
+            <img src="../img/catalog-fish1000.png" width="140" height="112" alt="Рыба 1 килограмм."
               class="product-card__image">
             <div class="product-card__field">
               <p class="product-card__title">Cat Energy PRO 1000 г</p>
@@ -110,7 +112,7 @@
             <button class="button button--primary">заказать</button>
           </li>
           <li class="product-catalog__item product-card">
-            <img src="/img/catalog-buckwheat500.png" width="140" height="112" alt="Гречка 500 грамм."
+            <img src="../img/catalog-buckwheat500.png" width="140" height="112" alt="Гречка 500 грамм."
               class="product-card__image">
             <div class="product-card__field">
               <p class="product-card__title">Cat Energy Slim 500 г</p>
@@ -128,7 +130,7 @@
             <button class="button button--primary">заказать</button>
           </li>
           <li class="product-catalog__item product-card">
-            <img src="/img/catalog-buckwheat1000.png" width="140" height="112" alt="Гречка 1 килограмм."
+            <img src="../img/catalog-buckwheat1000.png" width="140" height="112" alt="Гречка 1 килограмм."
               class="product-card__image">
             <div class="product-card__field">
               <p class="product-card__title">Cat Energy Slim 1000 г</p>
@@ -146,7 +148,7 @@
             <button class="button button--primary">заказать</button>
           </li>
           <li class="product-catalog__item product-card">
-            <img src="/img/catalog-rice500.png" width="140" height="112" alt="Рис 500 грамм."
+            <img src="../img/catalog-rice500.png" width="140" height="112" alt="Рис 500 грамм."
               class="product-card__image">
             <div class="product-card__field">
               <p class="product-card__title">Cat Energy Slim 500 г</p>
@@ -243,30 +245,42 @@
     <section class="page-footer__cooperation coop">
       <div class="coop__filling coop-filling">
         <div class="coop-filling__text">приглашаем<br>к сотрудничеству<br>дилеров!</div>
-        <div class="coop-filling__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</div>
+        <div class="coop-filling__adress">ул. Большая Конюшенная, д. <br>19/8 <br>
+          <p>Санкт-<br>Петербург</p>
+        </div>
       </div>
-      <div class="coop__map"></div>
+      <div class="coop__map">
+        <iframe
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3A64b5a98fc7e1a5310a059b8a6228923e4e9bf7f1487f33a15f38be3012bec41d&amp;source=constructor"
+          frameborder="0">
+        </iframe>
+      </div>
     </section>
-    <div class="page-footer__social-wrapper">
-      <div class="page-footer__logo">
-        <img src="/img/logo-text.svg" width="128" height="24" alt="Кэт энерджи.">
-      </div>
-      <div class="page-footer__social social">
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--vk" href="#"></a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--yt" href="https://www.youtube.com/user/htmlacademyru"></a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--tg" href="https://t.me/htmlacademy"></a>
-          </li>
-        </ul>
-      </div>
-      <div class="page-footer__copyright copyright">
-        <a class="copyright__link" href="https://htmlacademy.ru/">HTML Academy</a>
+    <div class="page-footer__social-filling">
+      <div class="page-footer__social-container">
+        <div class="page-footer__social-wrapper">
+          <div class="page-footer__logo">
+            <img src="../img/logo-text.svg" width="128" height="24" alt="Кэт энерджи.">
+          </div>
+          <div class="page-footer__social social">
+            <ul class="social__list">
+              <li class="social__item">
+                <a class="social__link social__link--vk" href="https://vk.ru/htmlacademy"></a>
+              </li>
+              <li class="social__item">
+                <a class="social__link social__link--yt" href="https://www.youtube.com/user/htmlacademyru"></a>
+              </li>
+              <li class="social__item">
+                <a class="social__link social__link--tg" href="https://t.me/htmlacademy"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="page-footer__copyright copyright">
+          <a class="copyright__link" href="https://htmlacademy.ru/">HTML Academy</a>
+        </div>
       </div>
     </div>
   </footer>
+  <script src="/js/script.js"></script>
 </body>

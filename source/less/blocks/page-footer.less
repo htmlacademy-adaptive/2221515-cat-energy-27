@@ -213,6 +213,22 @@
 
 .page-footer__logo {
   padding: 39px 0 32px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  @media (max-width: @mobile-width-only) {
+    &::after {
+      position: absolute;
+      content: "";
+      background-color: var(--thirdGrayColor);
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     padding: 63px 0 60px 0;
@@ -248,6 +264,22 @@
 }
 
 .page-footer__social {
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: @mobile-width-only) {
+    &::after {
+      position: absolute;
+      content: "";
+      background-color: var(--thirdGrayColor);
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     padding-left: 155px;
   }
@@ -278,5 +310,15 @@
 .page-footer__social-filling {
   @media (min-width: @tablet-width) {
     background-color: var(--secondaryButtonColor);
+  }
+}
+
+.page-footer.form-footer {
+  @media (max-width: @mobile-width-only) {
+    background-color: var(--primaryBackgrColor);
+  }
+
+  @media (min-width: @tablet-width) {
+    background-color: var(--primaryBackgrColor);
   }
 }
