@@ -155,6 +155,16 @@
   display: flex;
   padding: 28px 0 31px;
 
+  &::after {
+    position: absolute;
+    content: "";
+    background-color: var(--thirdGrayColor);
+    top: 0;
+    left: 20px;
+    right: 20px;
+    height: 1px;
+  }
+
   &::before {
     position: absolute;
     content: "";
@@ -267,18 +277,6 @@
   position: relative;
   display: flex;
   justify-content: center;
-
-  @media (max-width: @mobile-width-only) {
-    &::after {
-      position: absolute;
-      content: "";
-      background-color: var(--thirdGrayColor);
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 1px;
-    }
-  }
 
   @media (min-width: @tablet-width) {
     padding-left: 155px;

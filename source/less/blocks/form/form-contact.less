@@ -12,22 +12,10 @@
 
 .form-contact {
   box-sizing: border-box;
-
-  @media (min-width: @tablet-width) {
-    max-width: @tablet-width;
-    padding: 0 30px;
-  }
-
-  @media (min-width: @desktop-width) {
-    max-width: @desktop-width;
-    padding: 0 110px;
-  }
 }
 
 .form-contact__filling {
-  @media (max-width: @mobile-width-only) {
-    position: relative;
-  }
+  position: relative;
 
   &::before {
     position: absolute;
@@ -43,10 +31,24 @@
 
 .form-contact__contact-wrapper {
   @media (max-width: @mobile-width-only) {
+    display: flex;
+    flex-direction: column;
     max-width: 320px;
     margin: 0 auto;
     padding: 0 20px;
     box-sizing: border-box;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin: 0 auto;
+    padding: 0 30px;
+    box-sizing: border-box;
+    max-width: @tablet-width;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: @desktop-width;
+    padding: 0 110px;
   }
 }
 
@@ -56,62 +58,57 @@
   font-size: 24px;
   line-height: 26px;
   margin: 0;
+  margin-right: auto;
   display: block;
   z-index: 2;
+  background-color: var(--basicWhiteColor);
 
   @media (max-width: @mobile-width-only) {
-    padding: 26px 0 28px;
-
-    &::before {
-      position: absolute;
-      content: "";
-      background-color: var(--basicWhiteColor);
-      height: 10%;
-      width: 30%;
-      left: 50%;
-      top: 35%;
-      z-index: -1;
-    }
+    padding: 26px 22px 28px 0;
 
     &.title-about {
-      padding: 18px 0 31px;
-
-      &::before {
-        position: absolute;
-        content: "";
-        background-color: var(--basicWhiteColor);
-        height: 10%;
-        width: 5%;
-        left: 50%;
-        top: 40%;
-        z-index: -1;
-      }
+      padding: 18px 22px 31px 0;
     }
 
     &.title-additionally {
-      padding: 23px 0 28px;
-
-      &::before {
-        position: absolute;
-        content: "";
-        background-color: var(--basicWhiteColor);
-        height: 10%;
-        width: 13%;
-        left: 50%;
-        top: 45%;
-        z-index: -1;
-      }
+      padding: 23px 22px 28px 0;
     }
   }
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
+    padding: 75px 22px 76px 0;
+
+    & br {
+      display: none;
+    }
+
+    &.title-about {
+      padding: 18px 22px 31px 0;
+    }
+
+    &.title-additionally {
+      padding: 23px 22px 28px 0;
+    }
   }
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @desktop-width) {
     font-size: 36px;
     line-height: 36px;
+    padding: 69px 22px 76px 0;
+
+    & br {
+      display: none;
+    }
+
+    &.title-about {
+      padding: 18px 22px 31px 0;
+    }
+
+    &.title-additionally {
+      padding: 23px 22px 28px 0;
+    }
   }
 }
 
@@ -163,10 +160,6 @@
 .form-contact__about-filling {
   position: relative;
 
-  @media (max-width: @mobile-width-only) {
-    position: relative;
-  }
-
   &::before {
     position: absolute;
     content: "";
@@ -185,6 +178,23 @@
     margin: 0 auto;
     padding: 0 20px;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+  }
+
+  @media (min-width: @tablet-width) {
+    max-width: @tablet-width;
+    margin: 0 auto;
+    padding: 0 30px;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: @desktop-width;
+    margin: 0 auto;
+    padding: 0 110px;
+    box-sizing: border-box;
   }
 }
 
@@ -202,7 +212,7 @@
 
 .form-filter-item {
   @media (max-width: @mobile-width-only) {
-    padding: 12px 0;
+    padding-top: 12px;
   }
 }
 
@@ -226,7 +236,7 @@
     height: 2px;
     right: 0;
     left: 50%;
-    top: 11%;
+    top: 10%;
     z-index: -1;
   }
 }
@@ -236,6 +246,21 @@
     max-width: 320px;
     margin: 0 auto;
     padding: 0 20px;
+    box-sizing: border-box;
+    display: flex;
+  }
+
+  @media (min-width: @tablet-width) {
+    max-width: @tablet-width;
+    margin: 0 auto;
+    padding: 0 30px;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: @desktop-width;
+    margin: 0 auto;
+    padding: 0 110px;
     box-sizing: border-box;
   }
 }
