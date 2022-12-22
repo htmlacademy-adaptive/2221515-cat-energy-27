@@ -17,13 +17,15 @@
   @media (min-width: @desktop-width) {
     max-width: @desktop-width;
     box-sizing: border-box;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     padding: 0 110px;
   }
 }
 
 .field {
   flex-grow: 1;
+  box-sizing: border-box;
 
   @media (max-width: @mobile-width-only) {
     height: 45px;
@@ -148,11 +150,14 @@
 
   @media (min-width: @desktop-width) {
     max-width: @desktop-width;
-    width: 50%;
     font-size: 20px;
     line-height: 30px;
     padding: 10px 0 0 40px;
     min-width: auto;
+
+    & .form-filter {
+      padding: 18px 0;
+    }
   }
 }
 
@@ -171,18 +176,14 @@
   }
 
   @media (min-width: @tablet-width) {
-    border: none;
     max-width: @tablet-width;
-    padding: 0 30px;
     margin: 0 auto;
     box-sizing: border-box;
   }
 
   @media (min-width: @desktop-width) {
-    border: none;
     max-width: @desktop-width;
     margin: 0 auto;
-    padding: 0 110px;
     box-sizing: border-box;
   }
 }
@@ -226,6 +227,7 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
+    padding-left: 28px;
   }
 }
 
@@ -244,14 +246,14 @@
 
   @media (min-width: @desktop-width) {
     max-width: @desktop-width;
+    min-width: 100%;
     padding: 0;
-    width: 50%;
     margin-right: 80px;
   }
 
   &.container {
     @media (min-width: @desktop-width) {
-      padding: 0 40px 0 0;
+      padding: 0;
     }
   }
 }

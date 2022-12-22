@@ -26,13 +26,24 @@
     left: 50%;
     top: 17%;
     z-index: -1;
+
+    @media (min-width: @tablet-width) {
+      left: 0;
+      top: 29%;
+    }
+
+    @media (min-width: @desktop-width) {
+      left: 0;
+      top: 35%;
+    }
   }
 }
 
 .form-contact__contact-wrapper {
+  display: flex;
+  flex-direction: column;
+
   @media (max-width: @mobile-width-only) {
-    display: flex;
-    flex-direction: column;
     max-width: 320px;
     margin: 0 auto;
     padding: 0 20px;
@@ -78,43 +89,52 @@
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
-    padding: 75px 22px 76px 0;
+    padding: 75px 40px 76px 40px;
+    margin-left: -40px;
 
     & br {
       display: none;
     }
 
     &.title-about {
-      padding: 18px 22px 31px 0;
+      padding: 55px 40px 66px 40px;
+      margin-left: -40px;
     }
 
     &.title-additionally {
-      padding: 23px 22px 28px 0;
+      padding: 0 40px 41px 40px;
+      margin-left: -40px;
     }
   }
 
   @media (min-width: @desktop-width) {
     font-size: 36px;
     line-height: 36px;
-    padding: 69px 22px 76px 0;
+    padding: 69px 40px 76px 40px;
 
     & br {
       display: none;
     }
 
     &.title-about {
-      padding: 18px 22px 31px 0;
+      padding: 57px 40px 66px 40px;
     }
 
     &.title-additionally {
-      padding: 23px 22px 28px 0;
+      padding: 23px 40px 41px 40px;
     }
   }
 }
 
 .field-about.field {
+  padding-top: 10px;
+
   @media (max-width: @mobile-width-only) {
     padding-bottom: 150px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 134px;
   }
 }
 
@@ -123,6 +143,7 @@
   text-transform: uppercase;
   display: flex;
   align-items: center;
+  position: relative;
 
   @media (max-width: @mobile-width-only) {
     padding: 7px 0;
@@ -133,8 +154,13 @@
   }
 
   @media (min-width: @tablet-width) {
+    padding: 10px 0;
     font-size: 20px;
     line-height: 30px;
+
+    & label {
+      padding-right: 20px;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -142,8 +168,13 @@
     font-size: 20px;
     line-height: 30px;
 
+    &:last-child {
+      padding-left: 78px;
+    }
+
     &.form-about {
       width: 100%;
+      padding-left: 0;
     }
   }
 }
@@ -167,19 +198,30 @@
     height: 2px;
     right: 0;
     left: 50%;
-    top: 11%;
+    top: 12%;
     z-index: -1;
+
+    @media (min-width: @tablet-width) {
+      left: 0;
+      top: 23%;
+    }
+
+    @media (min-width: @desktop-width) {
+      left: 0;
+      top: 23%;
+    }
   }
 }
 
 .form-contact__about-wrapper {
+  display: flex;
+  flex-direction: column;
+
   @media (max-width: @mobile-width-only) {
     max-width: 320px;
     margin: 0 auto;
     padding: 0 20px;
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
     margin-right: auto;
   }
 
@@ -214,11 +256,19 @@
   @media (max-width: @mobile-width-only) {
     padding-top: 12px;
   }
+
+  @media (min-width: @tablet-width) {
+    padding: 21px 0;
+  }
 }
 
 .form-contact__additionally {
   position: relative;
   margin: 65px 0 20px;
+
+  & .form-filter {
+    border: none;
+  }
 
   @media (max-width: @mobile-width-only) {
     position: relative;
@@ -229,6 +279,27 @@
     }
   }
 
+  @media (min-width: @tablet-width) {
+    & button {
+      margin: 59px 0 72px;
+      padding: 13px 0;
+      width: 40%;
+    }
+
+    & .form-filter {
+      border: none;
+      padding: 0 110px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    & button {
+      margin: 59px 0 72px;
+      padding: 13px 0;
+      width: 45%;
+    }
+  }
+
   &::before {
     position: absolute;
     content: "";
@@ -236,18 +307,29 @@
     height: 2px;
     right: 0;
     left: 50%;
-    top: 10%;
+    top: 11%;
     z-index: -1;
+
+    @media (min-width: @tablet-width) {
+      left: 0;
+      top: 6%;
+    }
+
+    @media (min-width: @desktop-width) {
+      left: 0;
+      top: 13%;
+    }
   }
 }
 
 .title-additionally__wrapper {
+  display: flex;
+
   @media (max-width: @mobile-width-only) {
     max-width: 320px;
     margin: 0 auto;
     padding: 0 20px;
     box-sizing: border-box;
-    display: flex;
   }
 
   @media (min-width: @tablet-width) {
@@ -271,6 +353,16 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr  1fr 1fr;
+  }
 }
 
 .required-fields {
@@ -281,6 +373,7 @@
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 16px;
+    padding-left: 64px;
   }
 }
 

@@ -9,7 +9,21 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
-  color: #444444;
+  color: var(--basicGrayColor);
+
+  &-name-svg {
+    position: absolute;
+    content: "";
+    top: 35%;
+    right: 15px;
+  }
+
+  &-weight-svg {
+    position: absolute;
+    content: "";
+    top: 35%;
+    right: 15px;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -41,6 +55,12 @@
       border: 1px solid var(--fifthGrayColor);
       top: -2px;
       left: 0;
+
+      @media (min-width: @tablet-width) {
+        width: 38px;
+        height: 38px;
+        top: -8px;
+      }
     }
   }
 
@@ -53,6 +73,14 @@
     top: 50%;
     left: 6px;
     transform: translateY(-40%);
+
+    @media (min-width: @tablet-width) {
+      width: 24px;
+      height: 19px;
+      background: url("../img/ok-tablet.svg") no-repeat;
+      left: 9px;
+      transform: translateY(-45%);
+    }
   }
 }
 
