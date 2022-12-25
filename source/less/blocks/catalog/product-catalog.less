@@ -52,23 +52,11 @@
     line-height: 60px;
     text-align: left;
   }
-
-  @media (min-width: @desktop-width) {
-  }
 }
 
 .product-card__filling {
   display: flex;
   justify-content: space-between;
-
-  @media (max-width: @mobile-width-only) {
-  }
-
-  @media (min-width: @tablet-width) {
-  }
-
-  @media (min-width: @desktop-width) {
-  }
 }
 
 .product-card__title {
@@ -86,6 +74,10 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 24px;
+    text-align: center;
+    padding-bottom: 21px;
+    width: 165px;
+    margin: 0 auto;
 
     & br {
       display: none;
@@ -105,15 +97,6 @@
   .lato();
   font-size: 12px;
   line-height: 16px;
-
-  @media (max-width: @mobile-width-only) {
-  }
-
-  @media (min-width: @tablet-width) {
-  }
-
-  @media (min-width: @desktop-width) {
-  }
 }
 
 .product-card__list {
@@ -121,12 +104,11 @@
   padding: 0;
 
   @media (max-width: @mobile-width-only) {
+    width: 100%;
   }
 
   @media (min-width: @tablet-width) {
-  }
-
-  @media (min-width: @desktop-width) {
+    width: 100%;
   }
 }
 
@@ -135,6 +117,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-end;
+  position: relative;
 
   @media (max-width: @mobile-width-only) {
     margin: 0 auto;
@@ -145,10 +128,6 @@
 
   @media (min-width: @tablet-width) {
     height: 530px;
-    align-items: flex-end;
-  }
-
-  @media (min-width: @desktop-width) {
   }
 }
 
@@ -156,9 +135,6 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
-
-  @media (max-width: @mobile-width-only) {
-  }
 
   @media (min-width: @tablet-width) {
     display: grid;
@@ -173,6 +149,9 @@
     display: grid;
     grid-template-columns: repeat(4, 245px);
     gap: 80px;
+    max-width: @desktop-width;
+    padding: 0 110px;
+    margin: 0 auto;
   }
 }
 
@@ -183,6 +162,24 @@
 
   & button {
     width: 100%;
+  }
+
+  &:last-child .product-card__wrapper::after {
+    position: absolute;
+    content: "";
+    background: url("../img/catalog-plus.svg") no-repeat 50% 50%;
+    height: 60px;
+    width: 60px;
+    top: 180px;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+
+    @media (max-width: @mobile-width-only) {
+      width: 30px;
+      height: 30px;
+      top: 30px;
+    }
   }
 
   @media (max-width: @mobile-width-only) {
@@ -218,7 +215,24 @@
 
     & button {
       margin: 33px 37px 39px 39px;
-      height: 40px;
+    }
+
+    &:not(:last-child) .product-card__wrapper {
+      background-image: linear-gradient(var(--basicWhiteColor) 20%, var(--secondaryButtonColor) 20% 100%);
+    }
+
+    &:last-child .product-card__wrapper {
+      text-align: center;
+    }
+
+    &:last-child .product-card__wrapper::before {
+      position: absolute;
+      content: "";
+      border: 1px solid var(--fifthGrayColor);
+      height: 424px;
+      width: 100%;
+      bottom: 0;
+      right: 0;
     }
   }
 
@@ -232,15 +246,9 @@
 .product-card__field {
   width: 46%;
 
-  @media (max-width: @mobile-width-only) {
-  }
-
   @media (min-width: @tablet-width) {
     padding: 0 36px;
     width: 100%;
-  }
-
-  @media (min-width: @desktop-width) {
   }
 }
 
@@ -248,14 +256,38 @@
   .lato();
   font-size: 12px;
   line-height: 16px;
+  display: flex;
+  justify-content: space-between;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
+    padding: 8px 0;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background-color: var(--fifthGrayColor);
+    }
   }
 
   @media (min-width: @desktop-width) {
     font-size: 16px;
     line-height: 16px;
+  }
+}
+
+.get-more {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (max-width: @mobile-width-only) {
+    width: 100%;
   }
 }
 
@@ -269,14 +301,17 @@
   padding-top: 120px;
 
   @media (max-width: @mobile-width-only) {
+    padding-top: 80px;
   }
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 22px;
+    width: 65%;
   }
 
   @media (min-width: @desktop-width) {
+    width: 100%;
   }
 }
 
@@ -285,14 +320,13 @@
   font-size: 12px;
   line-height: 16px;
 
-  @media (max-width: @mobile-width-only) {
-  }
-
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 18px;
+    width: 65%;
   }
 
   @media (min-width: @desktop-width) {
+    width: 100%;
   }
 }
