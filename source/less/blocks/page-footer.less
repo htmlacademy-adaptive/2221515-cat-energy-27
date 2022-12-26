@@ -106,6 +106,20 @@
   }
 }
 
+.page-footer {
+  @media (max-width: @mobile-width-only) {
+    background-color: var(--primaryBackgrColor);
+  }
+
+  @media (min-width: @tablet-width) {
+    background-color: var(--primaryBackgrColor);
+  }
+
+  &--index {
+    background-color: var(--basicWhiteColor);
+  }
+}
+
 .page-footer__social-wrapper {
   display: flex;
   flex-direction: column;
@@ -308,15 +322,5 @@
 .page-footer__social-filling {
   @media (min-width: @tablet-width) {
     background-color: var(--secondaryButtonColor);
-  }
-}
-
-.page-footer.form-footer {
-  @media (max-width: @mobile-width-only) {
-    background-color: var(--primaryBackgrColor);
-  }
-
-  @media (min-width: @tablet-width) {
-    background-color: var(--primaryBackgrColor);
   }
 }
