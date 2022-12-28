@@ -1,0 +1,109 @@
+.page-footer__social-filling {
+  @media (min-width: @tablet-width) {
+    background-color: var(--secondaryButtonColor);
+  }
+}
+
+.page-footer__social-container {
+  background-color: var(--secondaryButtonColor);
+  justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    max-width: @tablet-width;
+    margin: 0 auto;
+    padding: 0 30px;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: @desktop-width;
+    padding: 0 110px;
+  }
+}
+
+.page-footer__social-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 320px;
+  padding: 0 20px;
+  box-sizing: border-box;
+
+  @media (max-width: @mobile-width-only) {
+    margin: 0 auto;
+  }
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: @tablet-width;
+    padding: 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: @desktop-width;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+  }
+}
+
+.page-footer__social {
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 155px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 414px;
+  }
+}
+
+.social__list {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 20px 0 21px;
+
+  @media (min-width: @tablet-width) {
+    padding: 20px 0;
+  }
+}
+
+.social__item {
+  width: 28px;
+  height: 22px;
+  padding: 0 13px;
+}
+
+.social__link {
+  position: relative;
+
+  &--vk::before {
+    position: absolute;
+    content: "";
+    background: url("../img/vk.svg") no-repeat 50% 50%;
+    width: 28px;
+    height: 22px;
+  }
+
+  &--yt::before {
+    position: absolute;
+    content: "";
+    background: url("../img/yt.svg") no-repeat 50% 50%;
+    width: 28px;
+    height: 22px;
+  }
+
+  &--tg::before {
+    position: absolute;
+    content: "";
+    background: url("../img/tg.svg") no-repeat 50% 50%;
+    width: 28px;
+    height: 22px;
+  }
+}

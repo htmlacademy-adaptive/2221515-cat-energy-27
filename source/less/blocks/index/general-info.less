@@ -1,7 +1,23 @@
 .general-info {
-  padding: 30px 20px;
+  padding: 0 20px;
   margin: 0 auto;
   max-width: 320px;
+  box-sizing: border-box;
+
+  @media (max-width: @mobile-width-only) {
+    padding-bottom: 49px;
+  }
+
+  @media (min-width: @tablet-width) {
+    max-width: @tablet-width;
+    padding: 0 30px 104px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: @desktop-width;
+    padding: 0 110px;
+    padding-bottom: 60px;
+  }
 }
 
 .general-info__title {
@@ -12,21 +28,137 @@
   line-height: 36px;
   color: #000000;
   margin: 0;
+  padding: 20px 0 42px 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    padding: 45px 0 0 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 60px;
+    line-height: 60px;
+    padding: 71px 0 0 0;
+  }
 }
 
 .general-info__list {
   margin: 0;
   padding: 0;
   list-style-type: none;
+
+  @media (min-width: @tablet-width) {
+    flex-wrap: wrap;
+    display: flex;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+  }
 }
 
 .general-info__item {
+  position: relative;
   margin: 0;
-  margin-top: 20px;
   padding: 0;
   list-style-type: none;
-  height: 60px;
   box-sizing: border-box;
+
+  &::before {
+    position: absolute;
+    content: "";
+  }
+
+  &.info-card--1::before {
+    background-image: url("../img/card1-mobile.svg");
+  }
+
+  &.info-card--2::before {
+    background-image: url("../img/card2-mobile.svg");
+  }
+
+  &.info-card--3::before {
+    background-image: url("../img/card3-mobile.svg");
+  }
+
+  &.info-card--4::before {
+    background-image: url("../img/card4-mobile.svg");
+  }
+
+  @media (max-width: @mobile-width-only) {
+    padding-left: 80px;
+    min-height: 60px;
+
+    &:not(:first-child) {
+      margin-top: 20px;
+    }
+
+    & br {
+      display: none;
+    }
+
+    &::before {
+      background-size: 60px 60px;
+      height: 60px;
+      width: 60px;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    height: 280px;
+    padding-right: 100px;
+    padding-top: 200px;
+    max-width: 50%;
+
+    &::before {
+      background-size: 80px 80px;
+      height: 80px;
+      width: 80px;
+      top: 70px;
+      left: 0;
+    }
+
+    &::after {
+      position: absolute;
+      font-family: "oswald-medium", sans-serif;
+      font-size: 280px;
+      line-height: 280px;
+      font-weight: 400;
+      color: var(--secondaryButtonColor);
+      top: 0;
+      right: 50px;
+      width: 146px;
+      height: 280px;
+      z-index: -1;
+    }
+
+    &.info-card--1::after {
+      content: "1";
+    }
+
+    &.info-card--2::after {
+      content: "2";
+    }
+
+    &.info-card--3::after {
+      content: "3";
+    }
+
+    &.info-card--4::after {
+      content: "4";
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 280px;
+    padding-right: 40px;
+    padding-top: 183px;
+    max-width: 100%;
+  }
 }
 
 .info-card__text {
@@ -35,61 +167,13 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
-}
 
-@media (min-width: @tablet-width) {
-  .general-info {
-    max-width: @tablet-width;
-    padding: 30px 30px;
-  }
-
-  .general-info__item {
-    height: 280px;
-    padding-right: 135px;
-    padding-top: 200px;
-    max-width: 50%;
-  }
-
-  .general-info__list {
-    flex-wrap: wrap;
-    display: flex;
-  }
-
-  .general-info__title {
-    font-size: 60px;
-    line-height: 60px;
-  }
-
-  .info-card__text {
+  @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 20px;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .general-info {
-    max-width: @desktop-width;
-    padding: 30px 110px;
-  }
-
-  .general-info__item {
-    height: 280px;
-    padding-right: 0;
-    padding-top: 200px;
-    max-width: 100%;
-  }
-
-  .general-info__list {
-    display: grid;
-    grid-template-columns: repeat(4, 25%);
-  }
-
-  .general-info__title {
-    font-size: 60px;
-    line-height: 60px;
-  }
-
-  .info-card__text {
+  @media (min-width: @desktop-width) {
     font-size: 16px;
     line-height: 20px;
   }

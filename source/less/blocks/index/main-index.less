@@ -1,106 +1,62 @@
 .main-index__program-wrapper {
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    background-image: var(--basicWhiteColor);
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: var(--basicWhiteColor);
+  }
 }
 
 .program-wrapper__background {
   position: absolute;
   content: "";
   background-image: url("/img/background-cat-mobile.jpg");
+  background-color: var(--fourthBackgrColor);
   width: 100%;
   height: 302px;
   background-repeat: no-repeat;
   background-position: right 50% top 0;
   z-index: -2;
-}
 
-.program-wrapper__background::before {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 302px;
-  background-color: var(--thirdBackgrColor);
-  z-index: -1;
-}
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 302px;
+    background-color: var(--thirdBackgrColor);
+    z-index: -1;
+  }
 
-.main-index__program {
-  font-family: "oswald-medium", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  color: var(--basicWhiteColor);
-  padding: 0 20px;
-  margin: 0 auto;
-  max-width: 320px;
-}
-
-.program__title {
-  margin: 0;
-  font-size: 36px;
-  line-height: 36px;
-  font-weight: 400;
-}
-
-.program__text {
-  font-size: 14px;
-  line-height: 14px;
-  text-transform: uppercase;
-}
-
-@media (min-width: @tablet-width) {
-  .program-wrapper__background {
+  @media (min-width: @tablet-width) {
     display: none;
   }
 
-  .main-index__program-wrapper {
-    background-image: var(--basicWhiteColor);
-  }
-
-  .main-index__program {
-    color: var(--basicBlackColor);
-    height: 800px;
-    padding: 0 30px;
-    max-width: @tablet-width;
-  }
-
-  .program__title {
-    font-size: 60px;
-    line-height: 60px;
-  }
-
-  .program__text {
-    font-size: 20px;
-    line-height: 20px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .program-wrapper__background {
+  @media (min-width: @desktop-width) {
     display: flex;
-    background-image: url("/img/background-cat-desktop.jpg");
-    justify-content: right;
-    width: 720px;
+    background-image: linear-gradient(to right, var(--basicWhiteColor) 50%, var(--fourthBackgrColor) 50% 100%);
     height: 694px;
-    top: -150px;
-    right: 0;
-  }
+    top: -200px;
 
-  .program-wrapper__background::before {
-    position: absolute;
-    content: "";
-    width: 720px;
-    height: 694px;
-    background-color: var(--thirdBackgrColor);
-    z-index: -1;
-    right: 0;
-  }
+    &::before {
+      position: absolute;
+      content: "";
+      height: 694px;
+      background-color: var(--thirdBackgrColor);
+      z-index: -1;
+      left: 50%;
+      width: 50%;
+    }
 
-  .main-index__program-wrapper {
-    background-image: var(--basicWhiteColor);
-  }
-
-  .main-index__program {
-    color: var(--basicBlackColor);
-    height: 600px;
-    padding: 0 110px;
-    max-width: @desktop-width;
+    &::after {
+      position: absolute;
+      content: "";
+      height: 694px;
+      width: 100%;
+      background: url("/img/background-cat-desktop.jpg") no-repeat right 0 top 0;
+      z-index: -2;
+    }
   }
 }

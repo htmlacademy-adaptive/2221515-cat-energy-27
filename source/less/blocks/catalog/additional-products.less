@@ -10,9 +10,84 @@
   font-weight: 400;
 }
 
-.additional-products {
-  box-sizing: border-box;
-  padding: 0 20px;
+.additional-products__item {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: var(--thirdGrayColor);
+  }
+
+  &:last-child::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: var(--thirdGrayColor);
+  }
+
+  @media (max-width: @mobile-width-only) {
+    padding-bottom: 19px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 28px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 0;
+    display: flex;
+  }
+}
+
+.additional-products-filling {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.additional-products__card {
+  @media (max-width: @mobile-width-only) {
+    & button {
+      width: 100%;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    & button {
+      width: 100%;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    width: 100%;
+
+    & button {
+      margin: 15px 0 17px 40px;
+    }
+  }
+}
+
+.additional-products__card-filling {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 330px 270px;
+    justify-content: space-between;
+  }
 }
 
 .additional-products__list {
@@ -20,6 +95,58 @@
   margin-bottom: 35px;
   padding: 0;
   list-style-type: none;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 69px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 73%;
+    margin-bottom: 86px;
+  }
+}
+
+.additional-products__title-wrapper {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-color: var(--primaryButtonColor);
+    height: 2px;
+    right: 0;
+    left: 50%;
+    top: 46%;
+    z-index: -1;
+
+    @media (min-width: @tablet-width) {
+      left: 0;
+      top: 49%;
+    }
+
+    @media (min-width: @tablet-width) {
+      top: 50%;
+    }
+  }
+}
+
+.additional-products__title-filling {
+  margin: 0 auto;
+  margin-right: auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+  display: flex;
+  max-width: 320px;
+
+  @media (min-width: @tablet-width) {
+    max-width: @tablet-width;
+    padding: 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: @desktop-width;
+    padding: 0 110px;
+  }
 }
 
 .additional-products__title {
@@ -27,7 +154,23 @@
   font-size: 24px;
   line-height: 24px;
   margin: 0;
-  padding: 25px 0 36px 0;
+  background-color: var(--basicWhiteColor);
+
+  @media (max-width: @mobile-width-only) {
+    padding: 25px 21px 36px 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    padding: 68px 36px 80px 37px;
+    margin-left: -30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 75px 35px 81px 35px;
+    margin-left: -40px;
+  }
 }
 
 .additive__title {
@@ -36,6 +179,13 @@
   line-height: 16px;
   text-transform: uppercase;
   margin: 0;
+  padding: 13px 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    padding: 25px 0;
+  }
 }
 
 .additive__list {
@@ -46,6 +196,22 @@
   padding: 0;
   display: flex;
   justify-content: space-between;
+  padding-bottom: 15px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+    padding-bottom: 0;
+    align-items: center;
+  }
+}
+
+.additive__item {
+  @media (min-width: @tablet-width) {
+    &:first-child {
+      padding-right: 49px;
+    }
+  }
 }
 
 .additional-products__get-all {
@@ -58,17 +224,43 @@
   width: 280px;
   height: 290px;
   background-color: var(--thirdBackgrColor);
-}
 
-.additive-get-all-background::before {
-  position: absolute;
-  content: "";
-  background: url("/img/background-cat-case-mobile.jpg") no-repeat 50% 50%;
-  top: 0;
-  right: 0;
-  width: 280px;
-  height: 290px;
-  z-index: -1;
+  &::before {
+    position: absolute;
+    content: "";
+    background: url("/img/background-cat-case-mobile.jpg") no-repeat 50% 50%;
+    top: 0;
+    right: 0;
+    width: 280px;
+    height: 290px;
+    z-index: -1;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 707px;
+    height: 200px;
+
+    &::before {
+      background: url("/img/background-cat-case-tablet.jpg") no-repeat 50% 50%;
+      top: 0;
+      right: 0;
+      width: 707px;
+      height: 200px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 245px;
+    height: 289px;
+
+    &::before {
+      background: url("/img/background-cat-case-desktop.jpg") no-repeat 50% 50%;
+      top: 0;
+      right: 0;
+      width: 245px;
+      height: 289px;
+    }
+  }
 }
 
 .additive-get-all__text {
@@ -80,98 +272,14 @@
   color: var(--basicWhiteColor);
   font-size: 16px;
   line-height: 20px;
-}
 
-@media (min-width: @tablet-width) {
-  .additional-products {
-    min-width: @tablet-width;
-    padding: 0 30px;
-  }
-
-  .additional-products__title {
-    font-size: 36px;
-    line-height: 36px;
-    padding: 68px 0 80px 0;
-  }
-
-  .additive__title {
-    font-size: 20px;
-    line-height: 20px;
-  }
-
-  .additive__list {
-    font-size: 16px;
-    line-height: 20px;
-  }
-
-  .additional-products__card-filling {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .additional-products__list {
-    margin-bottom: 69px;
-  }
-
-  .additive-get-all-background {
-    width: 707px;
-    height: 200px;
-  }
-
-  .additive-get-all-background::before {
-    background: url("/img/background-cat-case-tablet.jpg") no-repeat 50% 50%;
-    top: 0;
-    right: 0;
-    width: 707px;
-    height: 200px;
-  }
-
-  .additive-get-all__text {
+  @media (min-width: @tablet-width) {
     top: 33%;
     right: 22%;
     text-align: left;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .additional-products {
-    min-width: @desktop-width;
-    padding: 0 110px;
-  }
-
-  .additional-products__title {
-    padding: 75px 0 81px 0;
-  }
-
-  .additional-products-filling {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .additional-products__card-filling {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .additional-products__list {
-    width: 70%;
-    margin-bottom: 86px;
-  }
-
-  .additive-get-all-background {
-    width: 245px;
-    height: 289px;
-  }
-
-  .additive-get-all-background::before {
-    background: url("/img/background-cat-case-desktop.jpg") no-repeat 50% 50%;
-    top: 0;
-    right: 0;
-    width: 245px;
-    height: 289px;
-  }
-
-  .additive-get-all__text {
+  @media (min-width: @desktop-width) {
     top: 50%;
     right: 22%;
     text-align: center;

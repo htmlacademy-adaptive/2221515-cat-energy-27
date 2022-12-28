@@ -1,0 +1,22 @@
+.container {
+  @media (max-width: @mobile-width-only) {
+    margin: 0 auto;
+    max-width: 320px;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin: 0 auto;
+    max-width: @tablet-width;
+    padding: 0 30px;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 auto;
+    max-width: @desktop-width;
+    padding: 0 110px;
+    box-sizing: border-box;
+  }
+}

@@ -1,108 +1,37 @@
-.page-footer__social-container {
-  background-color: var(--secondaryButtonColor);
-  height: 236px;
+.page-footer {
+  @media (max-width: @mobile-width-only) {
+    background-color: var(--primaryBackgrColor);
+  }
+
+  @media (min-width: @tablet-width) {
+    background-color: var(--primaryBackgrColor);
+  }
+
+  &--index {
+    background-color: var(--basicWhiteColor);
+  }
 }
 
-.coop-filling {
+.page-footer__logo {
+  padding: 39px 0 32px;
+  position: relative;
   display: flex;
-  justify-content: space-between;
-}
+  justify-content: center;
+  width: 100%;
 
-.coop-filling__text {
-  font-family: "oswald-medium", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
-  color: var(--basicBlackColor);
-  text-transform: uppercase;
-}
-
-.coop-filling__adress {
-  font-family: "lato", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
-  color: var(--basicBlackColor);
-  max-width: 140px;
-}
-
-.page-footer__social-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 320px;
-  padding: 0 20px;
-  box-sizing: border-box;
-  margin: 0 auto;
-}
-
-.social__list {
-  display: flex;
-}
-
-.social__item {
-  width: 28px;
-}
-
-.copyright__link {
-  font-family: "lato", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 19px;
-  color: var(--basicBlackColor);
-  text-decoration: none;
-}
-
-.coop {
-  padding: 26px 0;
-}
-
-@media (min-width: @tablet-width) {
-  .page-footer__social-container {
-    height: 147px;
+  @media (max-width: @mobile-width-only) {
+    &::after {
+      position: absolute;
+      content: "";
+      background-color: var(--thirdGrayColor);
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+    }
   }
 
-  .coop {
-    padding: 60px 40px 56px 40px;
-  }
-
-  .page-footer__social-wrapper {
-    flex-direction: row;
-    justify-content: space-between;
-    max-width: @tablet-width;
-    padding: 0 30px;
-  }
-
-  .coop-filling__adress {
-    font-size: 16px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .page-footer__social-container {
-    height: 146px;
-  }
-
-  .coop {
-    padding: 60px 40px 56px 40px;
-  }
-
-  .page-footer__social-wrapper {
-    max-width: @desktop-width;
-    padding: 0 110px;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .coop-filling {
-    display: flex;
-    justify-content: left;
-  }
-
-  .coop-filling__text {
-    padding-right: 87px;
+  @media (min-width: @tablet-width) {
+    padding: 63px 0 60px 0;
   }
 }

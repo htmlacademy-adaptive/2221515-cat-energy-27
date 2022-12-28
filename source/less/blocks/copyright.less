@@ -1,0 +1,58 @@
+.copyright {
+  position: relative;
+  display: flex;
+  padding: 28px 0 31px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-color: var(--thirdGrayColor);
+    top: 0;
+    left: 20px;
+    right: 20px;
+    height: 1px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    background: url("../img/logo_htmlacademy.svg") no-repeat;
+    width: 27px;
+    height: 34px;
+    transform: translateY(-17%);
+  }
+
+  @media (max-width: @mobile-width-only) {
+    &::before {
+      right: 20px;
+    }
+
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 28px 20px 31px;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: @tablet-width) {
+    &::before {
+      right: 0;
+      transform: translateY(5%);
+    }
+    padding: 63px 50px 60px 0;
+    align-items: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 50px 0 0;
+  }
+}
+
+.copyright__link {
+  font-family: "lato", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--basicBlackColor);
+  text-decoration: none;
+}
