@@ -7,7 +7,7 @@
 
   @media (min-width: @tablet-width) {
     max-width: @tablet-width;
-    padding: 42px 30px;
+    padding-bottom: 30px;
     flex-direction: row;
   }
 
@@ -19,10 +19,13 @@
 
 .page-header__logo-wrapper {
   position: relative;
-  padding: 10px 20px;
-  box-sizing: border-box;
-  width: 320px;
-  margin: 0 auto;
+
+  @media (max-width: @mobile-width-only) {
+    padding: 10px 20px;
+    box-sizing: border-box;
+    width: 320px;
+    margin: 0 auto;
+  }
 
   @media (min-width: @tablet-width) {
     width: 30%;
