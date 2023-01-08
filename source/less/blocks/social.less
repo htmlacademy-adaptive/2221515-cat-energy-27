@@ -38,7 +38,6 @@
     flex-direction: row;
     justify-content: space-between;
     max-width: @tablet-width;
-    padding: 0 30px;
   }
 
   @media (min-width: @desktop-width) {
@@ -83,27 +82,27 @@
 .social__link {
   position: relative;
 
-  &--vk::before {
+  & .svg-vk,
+  & .svg-yt,
+  & .svg-tg {
     position: absolute;
     content: "";
-    background: url("../img/vk.svg") no-repeat 50% 50%;
-    width: 28px;
-    height: 22px;
+    top: 0;
+    left: 0;
   }
 
-  &--yt::before {
-    position: absolute;
-    content: "";
-    background: url("../img/yt.svg") no-repeat 50% 50%;
-    width: 28px;
-    height: 22px;
-  }
+  &--vk,
+  &--yt,
+  &--tg {
+    fill: var(--basicGrayColor);
 
-  &--tg::before {
-    position: absolute;
-    content: "";
-    background: url("../img/tg.svg") no-repeat 50% 50%;
-    width: 28px;
-    height: 22px;
+    &:hover {
+      fill: var(--primaryButtonColor);
+    }
+
+    &:active {
+      fill: var(--primaryButtonColor);
+      opacity: 0.3;
+    }
   }
 }

@@ -17,7 +17,11 @@
   }
 
   @media (min-width: @desktop-width) {
-    background-image: linear-gradient(var(--basicWhiteColor) 60%, var(--secondaryBackgrColor) 60% 100%);
+    background-image: linear-gradient(var(--basicWhiteColor) 30%, var(--secondaryBackgrColor) 30% 100%);
+
+    &::before {
+      display: none;
+    }
   }
 }
 
@@ -34,6 +38,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    display: flex;
     max-width: @desktop-width;
     padding: 0 110px;
   }
@@ -226,6 +231,10 @@
   @media (min-width: @desktop-width) {
     font-size: 14px;
     line-height: 14px;
+
+    &::before {
+      background-color: var(--secondaryBackgrColor);
+    }
   }
 }
 
@@ -293,6 +302,14 @@
       right: 0;
       width: 560px;
       height: 512px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 30px;
+
+    &--thin-cat {
+      top: 30px;
     }
   }
 }

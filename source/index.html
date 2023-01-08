@@ -124,43 +124,47 @@
     </section>
     <section class="example">
       <div class="example-filling">
-        <h2 class="example__title">Живой пример</h2>
-        <span class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм
-          на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих
-          привычек и по-прежнему спит по 16 часов в день.
-        </span>
-        <div class="example__wrapper">
-          <div class="example-card__filling">
-            <ul class="example__info example-card">
-              <li class="example-card__item">
-                <p class="example-card__mean">5 кг</p>
-              </li>
-              <li class="example-card__item">
-                <p class="example-card__description">снижение<br> веса</p>
-              </li>
-            </ul>
-            <ul class="example__info example-card">
-              <li class="example-card__item">
-                <p class="example-card__mean">60 дней</p>
-              </li>
-              <li class="example-card__item">
-                <p class="example-card__description">затрачено<br> времени</p>
-              </li>
-            </ul>
-          </div>
-          <div class="example__conclusion">
-            <span class="example__conclusion--text">Затраты на питание:</span>
-            <span class="example__conclusion--price">15 000 РУБ.</span>
+        <div class="example-filling__container">
+          <h2 class="example__title">Живой пример</h2>
+          <span class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм
+            на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих
+            привычек и по-прежнему спит по 16 часов в день.
+          </span>
+          <div class="example__wrapper">
+            <div class="example-card__filling">
+              <ul class="example__info example-card">
+                <li class="example-card__item">
+                  <p class="example-card__mean">5 кг</p>
+                </li>
+                <li class="example-card__item">
+                  <p class="example-card__description">снижение<br> веса</p>
+                </li>
+              </ul>
+              <ul class="example__info example-card">
+                <li class="example-card__item">
+                  <p class="example-card__mean">60 дней</p>
+                </li>
+                <li class="example-card__item">
+                  <p class="example-card__description">затрачено<br> времени</p>
+                </li>
+              </ul>
+            </div>
+            <div class="example__conclusion">
+              <span class="example__conclusion--text">Затраты на питание:</span>
+              <span class="example__conclusion--price">15 000 РУБ.</span>
+            </div>
           </div>
         </div>
         <div class="example__compare-slider">
           <picture>
             <source media="(min-width: 768px)" srcset="img/fat-cat-tablet.png" width="560" height="512">
-            <img class="example__compare-slider--fat-cat" src="img/fat-cat.png" width="280" height="256" alt="Толстый кот.">
+            <img class="example__compare-slider--fat-cat" src="img/fat-cat.png" width="280" height="256"
+              alt="Толстый кот.">
           </picture>
           <picture>
             <source media="(min-width: 768px)" srcset="img/thin-cat-tablet.png" width="560" height="512">
-            <img class="example__compare-slider--thin-cat" src="img/thin-cat.png" width="280" height="256" alt="Худой кот.">
+            <img class="example__compare-slider--thin-cat" src="img/thin-cat.png" width="280" height="256"
+              alt="Худой кот.">
           </picture>
         </div>
       </div>
@@ -191,19 +195,36 @@
           <div class="page-footer__social social">
             <ul class="social__list">
               <li class="social__item">
-                <a class="social__link social__link--vk" href="https://vk.ru/htmlacademy"></a>
+                <a class="social__link social__link--vk" href="https://vk.ru/htmlacademy">
+                  <svg class="svg-vk" width="28" height="22">
+                    <use href="img/sprite.svg#link-vk"></use>
+                  </svg>
+                </a>
               </li>
               <li class="social__item">
-                <a class="social__link social__link--yt" href="https://www.youtube.com/user/htmlacademyru"></a>
+                <a class="social__link social__link--yt" href="https://www.youtube.com/user/htmlacademyru">
+                  <svg class="svg-yt" width="28" height="22">
+                    <use href="img/sprite.svg#link-yt"></use>
+                  </svg>
+                </a>
               </li>
               <li class="social__item">
-                <a class="social__link social__link--tg" href="https://t.me/htmlacademy"></a>
+                <a class="social__link social__link--tg" href="https://t.me/htmlacademy">
+                  <svg class="svg-tg" width="28" height="22">
+                    <use href="img/sprite.svg#link-tg"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
           </div>
         </div>
         <div class="page-footer__copyright copyright">
           <a class="copyright__link" href="https://htmlacademy.ru/">HTML Academy</a>
+          <a class="copyright__link--logo" href="https://htmlacademy.ru/">
+            <svg class="copyright__link--logo-svg" width="27" height="34">
+              <use href="img/sprite.svg#copyright-logo"></use>
+            </svg>
+          </a>
         </div>
       </div>
     </div>
