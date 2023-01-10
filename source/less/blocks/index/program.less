@@ -83,4 +83,13 @@
 
 .program__logo {
   padding-bottom: 40px;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    &--img {
+      position: absolute;
+      top: -270px;
+      right: 210px;
+    }
+  }
 }
