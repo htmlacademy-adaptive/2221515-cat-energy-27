@@ -7,6 +7,7 @@
   @media (min-width: @tablet-width) {
     max-width: @tablet-width;
     padding: 0 30px;
+    margin-top: -5px;
   }
 
   @media (min-width: @desktop-width) {
@@ -53,17 +54,25 @@
   }
 
   @media (min-width: @tablet-width) {
-    margin-top: 30px;
+    & {
+      margin-top: 30px;
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
 
     &:first-child .servise__title::before {
+      display: block;
       position: absolute;
       content: "";
       background: url("../img/cat_slim.svg") no-repeat;
       background-size: 200px 211px;
       width: 200px;
       height: 211px;
-      top: 65px;
-      right: 40px;
+      top: 80px;
+      right: 38px;
+      transform: scaleX(1.06);
     }
 
     & .servise__title::before {
@@ -73,13 +82,18 @@
       background-size: 268px 200px;
       width: 268px;
       height: 200px;
-      top: 100px;
-      right: 14px;
+      top: 90px;
+      right: 2px;
+      transform: scaleX(1.06);
     }
   }
 
   @media (min-width: @desktop-width) {
     width: 50%;
+
+    &:first-child {
+      margin-top: 30px;
+    }
 
     & + &:nth-child(2n) {
       margin-left: 80px;
@@ -93,7 +107,7 @@
       width: 100px;
       height: 106px;
       top: 45px;
-      left: 52px;
+      left: 58px;
     }
 
     & .servise__title::before {
@@ -103,8 +117,8 @@
       background-size: 134px 100px;
       width: 134px;
       height: 100px;
-      top: 50px;
-      left: 32px;
+      top: 46px;
+      left: 37px;
     }
   }
 }
@@ -138,6 +152,7 @@
   padding: 0;
 
   @media (max-width: @mobile-width-only) {
+    transform: scaleX(0.96) translateX(-3px);
     padding: 30px 0 29px 71px;
   }
 
@@ -145,12 +160,13 @@
     font-size: 36px;
     line-height: 36px;
     padding: 77px 429px 24px 53px;
+    transform: scaleX(0.95) translateX(-16px);
   }
 
   @media (min-width: @desktop-width) {
     font-size: 36px;
     line-height: 36px;
-    padding: 77px 135px 73px 214px;
+    padding: 77px 0 73px 225px;
   }
 }
 
@@ -170,14 +186,14 @@
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
-    line-height: 20px;
+    line-height: 24px;
     padding-left: 52px;
   }
 
   @media (min-width: @desktop-width) {
     font-size: 16px;
     line-height: 24px;
-    padding-right: 67px;
+    padding-right: 65px;
 
     & br {
       display: none;
@@ -200,7 +216,7 @@
     background: url("../img/icon_arrow.svg") no-repeat;
     width: 24px;
     height: 12px;
-    bottom: 0;
+    bottom: 2px;
     left: 100px;
     transform: translateY(-50%);
   }
@@ -222,13 +238,14 @@
   @media (min-width: @tablet-width) {
     padding: 52px 0 0 52px;
     font-size: 20px;
+    transform: scaleX(0.96) translateX(-12px);
 
     &::after {
-      left: 190px;
+      left: 189px;
     }
   }
 
   @media (min-width: @desktop-width) {
-    padding: 27px 0 0 59px;
+    padding: 27px 0 0 54px;
   }
 }

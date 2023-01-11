@@ -51,11 +51,9 @@
         <div class="program__logo">
           <picture>
             <source type="image/webp" media="(min-width: 1440px)"
-              srcset="img/hero-desktop.webp 1x, img/hero-desktop@2x.webp 2x" width="552"
-              height="499">
+              srcset="img/hero-desktop.webp 1x, img/hero-desktop@2x.webp 2x" width="552" height="499">
             <source type="image/webp" media="(min-width: 768px)"
-              srcset="img/hero-tablet.webp 1x, img/hero-tablet@2x.webp 2x" width="709"
-              height="609">
+              srcset="img/hero-tablet.webp 1x, img/hero-tablet@2x.webp 2x" width="709" height="609">
             <source type="image/webp" srcset="img/hero-mobile.webp 1x, img/hero-mobile@2x.webp 2x">
 
             <source media="(min-width: 1440px)" srcset="img/hero-desktop.png 1x, img/hero-desktop@2x.png 2x" width="552"
@@ -200,7 +198,10 @@
       <div class="page-footer__social-container">
         <div class="page-footer__social-wrapper">
           <div class="page-footer__logo">
-            <img src="img/logo-text.svg" width="128" height="24" alt="Кэт энерджи.">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/logo-text-tablet.svg" width="143" height="26">
+              <img src="img/logo-text.svg" width="128" height="24" alt="Кэт энерджи.">
+            </picture>
           </div>
           <div class="page-footer__social social">
             <ul class="social__list">

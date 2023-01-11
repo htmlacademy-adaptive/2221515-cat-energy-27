@@ -20,14 +20,16 @@
     }
 
     @media (min-width: @tablet-width) {
+      font-size: 20px;
       top: 255px;
       left: 118px;
       min-width: 244px;
+      padding: 17px 0;
     }
 
     @media (min-width: @desktop-width) {
       top: 255px;
-      left: 110px;
+      left: 190px;
       min-width: 244px;
     }
   }
@@ -38,15 +40,13 @@
 
   @media (min-width: @tablet-width) {
     color: var(--basicBlackColor);
-    height: 800px;
     padding: 0 30px;
     max-width: @tablet-width;
   }
 
   @media (min-width: @desktop-width) {
     color: var(--basicBlackColor);
-    height: 600px;
-    padding: 0 110px;
+    padding: 0 110px 316px;
     max-width: @desktop-width;
   }
 }
@@ -57,11 +57,21 @@
   line-height: 36px;
   font-weight: 400;
 
+  @media (max-width: @mobile-width-only) {
+    transform: scaleX(0.93);
+  }
+
   @media (min-width: @tablet-width) {
     font-size: 60px;
     line-height: 60px;
     padding-top: 27px;
     padding-left: 88px;
+    transform: scaleX(0.93) translateX(-21px);
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 25px;
+    padding-left: 62px;
   }
 }
 
@@ -78,6 +88,11 @@
     line-height: 20px;
     padding-top: 41px;
     padding-left: 88px;
+    transform: scaleX(0.96) translateX(-11px);
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 69px;
   }
 }
 
@@ -85,11 +100,19 @@
   padding-bottom: 40px;
   position: relative;
 
+  @media (min-width: @tablet-width) {
+    &--img {
+      margin-top: -10px;
+    }
+    padding-bottom: 0;
+  }
+
   @media (min-width: @desktop-width) {
     &--img {
       position: absolute;
-      top: -270px;
-      right: 210px;
+      top: -283px;
+      right: 220px;
+      padding-bottom: 0;
     }
   }
 }
