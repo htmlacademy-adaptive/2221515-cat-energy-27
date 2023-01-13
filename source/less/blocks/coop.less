@@ -41,31 +41,64 @@
     transform: translateY(-50%);
     padding: 60px 73px 60px;
   }
-}
 
-.coop-filling__text {
-  font-family: "oswald-medium", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
-  color: var(--basicBlackColor);
-  text-transform: uppercase;
+  &--form {
+    padding-top: 27px;
 
-  @media (max-width: @mobile-width-only) {
-    transform: scaleX(0.96) translateX(-3px);
+    @media (min-width: @tablet-width) {
+      padding-top: 0;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-top: 61px;
+      justify-content: start;
+    }
+
+    & .coop-filling__text {
+      @media (min-width: @tablet-width) {
+        padding-top: 0;
+      }
+
+      @media (min-width: @desktop-width) {
+        padding-right: 90px;
+      }
+    }
+
+    & .coop-filling__adress {
+      @media (min-width: @tablet-width) {
+        padding-top: 0;
+      }
+
+      @media (min-width: @desktop-width) {
+        padding-top: 10px;
+      }
+    }
   }
 
-  @media (min-width: @tablet-width) {
-    font-size: 20px;
-    line-height: 26px;
-    padding-top: 7px;
-    transform: scaleX(0.93) translateX(-5px);
-  }
+  &__text {
+    font-family: "oswald-medium", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--basicBlackColor);
+    text-transform: uppercase;
 
-  @media (min-width: @desktop-width) {
-    padding-right: 87px;
-    padding-top: 0;
+    @media (max-width: @mobile-width-only) {
+      transform: scaleX(0.96) translateX(-3px);
+    }
+
+    @media (min-width: @tablet-width) {
+      font-size: 20px;
+      line-height: 26px;
+      padding-top: 7px;
+      transform: scaleX(0.93) translateX(-5px);
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-right: 87px;
+      padding-top: 0;
+    }
   }
 }
 
@@ -97,7 +130,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    max-width: 165px;
+    max-width: 126px;
     text-align: left;
 
     & br {
@@ -105,7 +138,7 @@
     }
 
     & p {
-      padding-top: 20px;
+      padding-top: 0;
 
       & br {
         display: none;

@@ -24,7 +24,7 @@
     height: 2px;
     right: 0;
     left: 50%;
-    top: 17%;
+    top: 20%;
     z-index: -1;
 
     @media (min-width: @tablet-width) {
@@ -75,22 +75,24 @@
   background-color: var(--basicWhiteColor);
 
   @media (max-width: @mobile-width-only) {
-    padding: 26px 22px 28px 0;
+    padding: 30px 22px 28px 0;
+    transform: scaleX(0.92) translateX(-8px);
 
     &.title-about {
       padding: 18px 22px 31px 0;
     }
 
     &.title-additionally {
-      padding: 23px 22px 28px 0;
+      padding: 17px 22px 18px 0;
     }
   }
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
-    padding: 75px 40px 76px 40px;
-    margin-left: -40px;
+    padding: 69px 47px 66px 40px;
+    margin-left: -16px;
+    transform: scaleX(0.92) translateX(-8px);
 
     & br {
       display: none;
@@ -98,30 +100,33 @@
 
     &.title-about {
       padding: 55px 40px 66px 40px;
-      margin-left: -40px;
+      margin-left: 0;
     }
 
     &.title-additionally {
-      padding: 0 40px 41px 40px;
-      margin-left: -40px;
+      padding: 56px 40px 41px 40px;
+      margin-left: 0;
     }
   }
 
   @media (min-width: @desktop-width) {
     font-size: 36px;
     line-height: 36px;
-    padding: 69px 40px 76px 40px;
+    padding: 61px 40px 66px 40px;
+    margin-left: -54px;
 
     & br {
       display: none;
     }
 
     &.title-about {
-      padding: 57px 40px 66px 40px;
+      padding: 57px 50px 66px 40px;
+      margin-left: -40px;
     }
 
     &.title-additionally {
-      padding: 23px 40px 41px 40px;
+      padding: 58px 40px 41px 40px;
+      margin-left: -40px;
     }
   }
 }
@@ -130,11 +135,12 @@
   padding-top: 10px;
 
   @media (max-width: @mobile-width-only) {
-    padding-bottom: 150px;
+    padding: 14px 0 130px 11px;
   }
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 134px;
+    padding-bottom: 146px;
+    padding-top: 22px;
   }
 }
 
@@ -158,8 +164,12 @@
     font-size: 20px;
     line-height: 30px;
 
+    &.form-about {
+      padding: 10px 40px;
+    }
+
     & label {
-      padding-right: 20px;
+      padding-right: 17px;
     }
   }
 
@@ -183,8 +193,13 @@
   display: flex;
   flex-direction: column;
 
+  @media (min-width: @tablet-width) {
+    padding: 0 40px;
+  }
+
   @media (min-width: @desktop-width) {
     flex-direction: row;
+    padding: 0;
   }
 }
 
@@ -198,12 +213,12 @@
     height: 2px;
     right: 0;
     left: 50%;
-    top: 12%;
+    top: 13%;
     z-index: -1;
 
     @media (min-width: @tablet-width) {
       left: 0;
-      top: 23%;
+      top: 22%;
     }
 
     @media (min-width: @desktop-width) {
@@ -254,7 +269,7 @@
 
 .form-filter-item {
   @media (max-width: @mobile-width-only) {
-    padding-top: 12px;
+    padding-top: 18px;
   }
 
   @media (min-width: @tablet-width) {
@@ -264,7 +279,6 @@
 
 .form-contact__additionally {
   position: relative;
-  margin: 65px 0 20px;
 
   & .form-filter {
     border: none;
@@ -274,29 +288,37 @@
     position: relative;
 
     & button {
-      margin: 28px 0 21px;
+      margin: 37px 0 21px;
       width: 100%;
     }
   }
 
   @media (min-width: @tablet-width) {
     & button {
-      margin: 59px 0 72px;
+      margin: 39px 0 72px;
       padding: 13px 0;
-      width: 40%;
+      width: 45%;
+      font-size: 20px;
+      line-height: 24px;
     }
 
     & .form-filter {
       border: none;
-      padding: 0 110px;
+      padding: 0 70px;
     }
   }
 
   @media (min-width: @desktop-width) {
     & button {
-      margin: 59px 0 72px;
+      margin: 47px 0 83px;
       padding: 13px 0;
-      width: 45%;
+      width: 47%;
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    & .form-filter {
+      padding: 0 110px;
     }
   }
 
@@ -307,17 +329,17 @@
     height: 2px;
     right: 0;
     left: 50%;
-    top: 11%;
+    top: 9%;
     z-index: -1;
 
     @media (min-width: @tablet-width) {
       left: 0;
-      top: 6%;
+      top: 18%;
     }
 
     @media (min-width: @desktop-width) {
       left: 0;
-      top: 13%;
+      top: 22%;
     }
   }
 }
@@ -357,11 +379,13 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
   }
 
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr  1fr 1fr;
+    column-gap: 80px;
   }
 }
 
@@ -369,11 +393,21 @@
   .lato();
   font-size: 14px;
   line-height: 16px;
+  padding-left: 64px;
+
+  @media (max-width: @mobile-width-only) {
+    display: block;
+    padding-bottom: 20px;
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 16px;
-    padding-left: 64px;
+    padding-left: 61px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 76px;
   }
 }
 
