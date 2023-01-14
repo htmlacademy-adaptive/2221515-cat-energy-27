@@ -2,6 +2,10 @@
   @media (min-width: @tablet-width) {
     background-color: var(--secondaryButtonColor);
   }
+
+  @media (min-width: @desktop-width) {
+    padding: 53px 0 53px;
+  }
 }
 
 .page-footer__social-container {
@@ -12,7 +16,7 @@
     display: flex;
     max-width: @tablet-width;
     margin: 0 auto;
-    padding: 0 30px;
+    padding: 43px 30px;
     box-sizing: border-box;
   }
 
@@ -38,7 +42,7 @@
     flex-direction: row;
     justify-content: space-between;
     max-width: @tablet-width;
-    padding: 0 30px;
+    padding: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -55,11 +59,11 @@
   justify-content: center;
 
   @media (min-width: @tablet-width) {
-    padding-left: 155px;
+    padding-left: 130px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 414px;
+    padding-left: 387px;
   }
 }
 
@@ -82,28 +86,29 @@
 
 .social__link {
   position: relative;
+  transition: fill 0.2s ease-in-out;
 
-  &--vk::before {
+  & .svg-vk,
+  & .svg-yt,
+  & .svg-tg {
     position: absolute;
     content: "";
-    background: url("../img/vk.svg") no-repeat 50% 50%;
-    width: 28px;
-    height: 22px;
+    top: 0;
+    left: 0;
   }
 
-  &--yt::before {
-    position: absolute;
-    content: "";
-    background: url("../img/yt.svg") no-repeat 50% 50%;
-    width: 28px;
-    height: 22px;
-  }
+  &--vk,
+  &--yt,
+  &--tg {
+    fill: var(--basicGrayColor);
 
-  &--tg::before {
-    position: absolute;
-    content: "";
-    background: url("../img/tg.svg") no-repeat 50% 50%;
-    width: 28px;
-    height: 22px;
+    &:hover {
+      fill: var(--primaryButtonColor);
+    }
+
+    &:active {
+      fill: var(--primaryButtonColor);
+      opacity: 0.3;
+    }
   }
 }

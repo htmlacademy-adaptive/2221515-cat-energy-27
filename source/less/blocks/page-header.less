@@ -7,43 +7,13 @@
 
   @media (min-width: @tablet-width) {
     max-width: @tablet-width;
-    padding-bottom: 30px;
     flex-direction: row;
+    padding: 0 15px 30px 30px;
   }
 
   @media (min-width: @desktop-width) {
     min-width: @desktop-width;
-    padding: 69px 110px;
-  }
-}
-
-.page-header__logo-wrapper {
-  position: relative;
-
-  @media (max-width: @mobile-width-only) {
-    padding: 10px 20px;
-    box-sizing: border-box;
-    width: 320px;
-    margin: 0 auto;
-  }
-
-  @media (min-width: @tablet-width) {
-    width: 30%;
-  }
-}
-
-.page-header__logo {
-  @media (max-width: @mobile-width-only) {
-    &::before {
-      position: absolute;
-      content: "";
-      background: url("../img/logo-text.svg") no-repeat;
-      width: 101px;
-      height: 18px;
-      top: 50%;
-      left: 50%;
-      transform: translateX(-50%) translateY(-50%);
-    }
+    padding: 56px 110px 65px;
   }
 }
 

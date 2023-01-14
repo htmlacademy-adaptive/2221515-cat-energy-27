@@ -3,30 +3,25 @@
   display: flex;
   padding: 28px 0 31px;
 
-  &::after {
-    position: absolute;
-    content: "";
-    background-color: var(--thirdGrayColor);
-    top: 0;
-    left: 20px;
-    right: 20px;
-    height: 1px;
-  }
+  @media (max-width: @mobile-width-only) {
+    justify-content: space-between;
 
-  &::before {
-    position: absolute;
-    content: "";
-    background: url("../img/logo_htmlacademy.svg") no-repeat;
-    width: 27px;
-    height: 34px;
-    transform: translateY(-17%);
+    & a {
+      display: block;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      background-color: var(--thirdGrayColor);
+      top: 0;
+      left: 20px;
+      right: 20px;
+      height: 1px;
+    }
   }
 
   @media (max-width: @mobile-width-only) {
-    &::before {
-      right: 20px;
-    }
-
     max-width: 320px;
     margin: 0 auto;
     padding: 28px 20px 31px;
@@ -34,16 +29,12 @@
   }
 
   @media (min-width: @tablet-width) {
-    &::before {
-      right: 0;
-      transform: translateY(5%);
-    }
-    padding: 63px 50px 60px 0;
+    padding: 0;
     align-items: center;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0 50px 0 0;
+    padding: 0;
   }
 }
 
@@ -55,4 +46,34 @@
   line-height: 19px;
   color: var(--basicBlackColor);
   text-decoration: none;
+
+  &--logo-svg {
+    fill: var(--basicGrayColor);
+    transition: fill 0.2s ease-in-out;
+
+    &:hover {
+      fill: var(--primaryButtonColor);
+    }
+
+    &:active {
+      fill: var(--primaryButtonColor);
+      opacity: 0.3;
+    }
+  }
+
+  @media (max-width: @mobile-width-only) {
+    &--logo-svg {
+      transform: translateY(-15%);
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    &--logo {
+      padding-left: 28px;
+    }
+
+    &--logo-svg {
+      transform: translateY(10%);
+    }
+  }
 }

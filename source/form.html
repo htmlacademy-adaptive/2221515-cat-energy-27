@@ -14,7 +14,7 @@
 <body class="body-main nojs">
   <header class="page-header">
     <div class="page-header__logo-wrapper">
-      <a class="page-header__logo" href="#">
+      <a class="page-header__logo" href="index.html">
         <picture>
           <source media="(min-width: 1440px)" srcset="img/logo-desktop-header.svg" width="202" height="59">
           <source media="(min-width: 768px)" srcset="img/logo-tablet-header.svg" width="174" height="62">
@@ -101,20 +101,16 @@
               <label for="enter-email">E-mail:*</label>
               <input class="field-name field" type="text" id="enter-email" name="email"
                 placeholder="kuklachev@gmail.com">
-              <svg class="field-name-svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path d="M1.5 8.5V16.5H18.5V8.5M1.5 3.5H18.5V5.5L10 11.5L1.5 5.5V3.5Z" stroke="black"
-                  stroke-linecap="round" stroke-linejoin="round" />
+              <svg class="field-name-svg" width="20" height="20">
+                <use href="img/sprite.svg#field-name"></use>
               </svg>
             </div>
             <div class="form-contact__field">
               <label for="enter-phone-number">Телефон:*</label>
               <input class="field-weight field" type="number" id="enter-phone-number" name="phone-number"
                 placeholder="8 (960) 900-60-90">
-              <svg class="field-weight-svg" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M10 10H18.5M18.5 10L16 7.5M18.5 10L16 12.5M8.5 2.5V7.5H5.5V12.5H8.5V17.5H6C4.5 17.5 3.5 16.5 3.5 15V5C3.5 3.5 4.5 2.5 6 2.5H8.5Z"
-                  stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+              <svg class="field-weight-svg" width="20" height="20">
+                <use href="img/sprite.svg#field-weight"></use>
               </svg>
             </div>
           </div>
@@ -160,7 +156,7 @@
             </li>
           </ul>
           <button class="button button--primary">Отправить заявку</button>
-          <span class="required-fields">* — Обязательные поля</span>
+          <span class="required-fields">*— Обязательные поля</span>
         </fieldset>
       </div>
     </section>
@@ -168,7 +164,7 @@
 
   <footer class="page-footer">
     <section class="page-footer__cooperation coop">
-      <div class="coop__filling coop-filling">
+      <div class="coop__filling coop-filling coop-filling--form">
         <div class="coop-filling__text">приглашаем<br>к сотрудничеству<br>дилеров!</div>
         <div class="coop-filling__adress">ул. Большая Конюшенная, д. <br>19/8 <br>
           <p>Санкт-<br>Петербург</p>
@@ -185,24 +181,44 @@
       <div class="page-footer__social-container">
         <div class="page-footer__social-wrapper">
           <div class="page-footer__logo">
-            <img src="img/logo-text.svg" width="128" height="24" alt="Кэт энерджи.">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/logo-text-tablet.svg" width="143" height="26">
+              <img src="img/logo-text.svg" width="128" height="24" alt="Кэт энерджи.">
+            </picture>
           </div>
           <div class="page-footer__social social">
             <ul class="social__list">
               <li class="social__item">
-                <a class="social__link social__link--vk" href="https://vk.ru/htmlacademy"></a>
+                <a class="social__link social__link--vk" href="https://vk.ru/htmlacademy">
+                  <svg class="svg-vk" width="28" height="22">
+                    <use href="img/sprite.svg#link-vk"></use>
+                  </svg>
+                </a>
               </li>
               <li class="social__item">
-                <a class="social__link social__link--yt" href="https://www.youtube.com/user/htmlacademyru"></a>
+                <a class="social__link social__link--yt" href="https://www.youtube.com/user/htmlacademyru">
+                  <svg class="svg-yt" width="28" height="22">
+                    <use href="img/sprite.svg#link-yt"></use>
+                  </svg>
+                </a>
               </li>
               <li class="social__item">
-                <a class="social__link social__link--tg" href="https://t.me/htmlacademy"></a>
+                <a class="social__link social__link--tg" href="https://t.me/htmlacademy">
+                  <svg class="svg-tg" width="28" height="22">
+                    <use href="img/sprite.svg#link-tg"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
           </div>
         </div>
         <div class="page-footer__copyright copyright">
           <a class="copyright__link" href="https://htmlacademy.ru/">HTML Academy</a>
+          <a class="copyright__link--logo" href="https://htmlacademy.ru/">
+            <svg class="copyright__link--logo-svg" width="27" height="34">
+              <use href="img/sprite.svg#copyright-logo"></use>
+            </svg>
+          </a>
         </div>
       </div>
     </div>

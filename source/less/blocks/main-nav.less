@@ -51,6 +51,7 @@
   padding: 0;
 
   @media (max-width: @mobile-width-only) {
+    transform: scaleX(1.06);
     position: absolute;
     content: "";
     z-index: 3;
@@ -78,7 +79,7 @@
   text-align: center;
 
   @media (max-width: @mobile-width-only) {
-    padding: 22px 0 24px 0;
+    padding: 24px 0 23px 0;
 
     &::before {
       position: absolute;
@@ -110,7 +111,11 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0 12px;
+    padding: 0 17px;
+
+    &:nth-child(3) {
+      padding-right: 0;
+    }
   }
 }
 
@@ -128,7 +133,7 @@
         content: "";
         height: 2px;
         background-color: var(--primaryButtonColor);
-        bottom: 0;
+        bottom: 4px;
         left: 0;
         right: 0;
       }
