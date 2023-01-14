@@ -89,16 +89,6 @@
   }
 }
 
-.get-more {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  @media (max-width: @mobile-width-only) {
-    width: 100%;
-  }
-}
-
 .get-more__title {
   .oswald();
   font-size: 16px;
@@ -116,10 +106,12 @@
     font-size: 20px;
     line-height: 22px;
     width: 65%;
+    padding-bottom: 20px;
   }
 
   @media (min-width: @desktop-width) {
     width: 100%;
+    padding-bottom: 23px;
   }
 }
 
@@ -127,14 +119,23 @@
   .lato();
   font-size: 12px;
   line-height: 16px;
+  margin: 0;
+
+  @media (max-width: @mobile-width-only) {
+    padding-top: 7px;
+    padding-bottom: 20px;
+  }
+
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 18px;
-    width: 65%;
+    width: 70%;
+    padding-bottom: 54px;
   }
 
   @media (min-width: @desktop-width) {
     width: 100%;
+    padding-bottom: 64px;
   }
 }
