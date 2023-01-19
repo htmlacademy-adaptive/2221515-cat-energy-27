@@ -162,4 +162,3 @@ export default gulp.series(
   gulp.parallel(styles, html, script, sprite, createWebp),
   gulp.series(server, watcher)
 );
- 
