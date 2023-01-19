@@ -28,16 +28,16 @@
   line-height: 36px;
   color: #000000;
   margin: 0;
-  padding: 20px 0 42px 0;
 
   @media (max-width: @mobile-width-only) {
+    padding: 22px 0 42px 0;
     transform: scaleX(0.93) translateX(-10px);
   }
 
   @media (min-width: @tablet-width) {
     font-size: 60px;
     line-height: 60px;
-    padding: 45px 0 0 0;
+    padding: 47px 0 0 0;
     transform: scaleX(0.93) translateX(-25px);
   }
 
@@ -154,7 +154,7 @@
       font-weight: 400;
       color: var(--secondaryButtonColor);
       top: 30px;
-      right: 100px;
+      right: 90px;
       width: 146px;
       height: 280px;
       z-index: -1;
@@ -193,10 +193,22 @@
     padding-top: 183px;
     max-width: 100%;
 
+    &::after {
+      right: 43px;
+    }
+
+    &::before {
+      top: 74px;
+    }
+
     &:nth-child(even) {
       margin-left: 0;
       max-width: 100%;
       padding-right: 40px;
+
+      &::after {
+        right: 44px;
+      }
     }
   }
 }

@@ -25,18 +25,15 @@
     padding-left: 16px;
   }
 
-  &-name-svg {
-    position: absolute;
-    content: "";
-    top: 35%;
-    right: 15px;
-  }
-
+  &-name-svg,
   &-weight-svg {
     position: absolute;
     content: "";
     top: 35%;
     right: 15px;
+    fill: var(--basicWhiteColor);
+    stroke: var(--basicBlackColor);
+    transition: stroke 0.2s ease-in-out;
   }
 
   .field-name& {
@@ -58,6 +55,36 @@
 
 input {
   border: 1px solid var(--secondaryGrayColor);
+  /* stylelint-disable-next-line property-no-vendor-prefix */
+  -moz-appearance: textfield;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    /* stylelint-disable-next-line property-no-vendor-prefix */
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  &:hover {
+    border: 1px solid var(--fifthGrayColor);
+  }
+
+  &:active {
+    border: 2px solid var(--basicGrayColor);
+  }
+
+  &:focus-visible {
+    & + .field-name-svg {
+      stroke: var(--primaryButtonColor);
+    }
+
+    & + .field-weight-svg {
+      stroke: var(--primaryButtonColor);
+    }
+
+    border: 2px solid var(--basicGrayColor);
+    border-radius: 0;
+  }
 }
 
 .control {
@@ -140,12 +167,14 @@ input {
     top: -2px;
     left: 0;
     border-radius: 50%;
-    box-shadow: inset 0 0 0 7.5px var(--basicWhiteColor), inset 0 0 0 15px var(--primaryButtonColor);
+    box-shadow: inset 0 0 0 7.5px var(--basicWhiteColor),
+      inset 0 0 0 15px var(--primaryButtonColor);
 
     @media (min-width: @tablet-width) {
       width: 40px;
       height: 40px;
-      box-shadow: inset 0 0 0 10px var(--basicWhiteColor), inset 0 0 0 22px var(--primaryButtonColor);
+      box-shadow: inset 0 0 0 10px var(--basicWhiteColor),
+        inset 0 0 0 22px var(--primaryButtonColor);
       top: -4px;
     }
   }
