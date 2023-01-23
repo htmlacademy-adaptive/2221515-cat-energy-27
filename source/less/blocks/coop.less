@@ -10,6 +10,16 @@
   }
 }
 
+.coop-container {
+  @media (min-width: @desktop-width) {
+    position: relative;
+    margin: 0 auto;
+    padding: 0 110px;
+    width: @desktop-width;
+    box-sizing: border-box;
+  }
+}
+
 .coop-filling {
   display: flex;
   justify-content: space-between;
@@ -33,13 +43,13 @@
     display: flex;
     position: absolute;
     align-items: center;
-    top: 48%;
-    left: 115px;
-    width: 565px;
-    height: 196px;
+    top: 190px;
+    left: 113px;
+    width: 564px;
+    height: 197px;
     background-color: var(--basicWhiteColor);
     transform: translateY(-50%);
-    padding: 60px 73px 60px;
+    padding: 60px 73px;
   }
 
   &--catalog,
@@ -173,7 +183,7 @@
 
 .coop__map {
   & iframe {
-    border: none;
+    border: 0;
     display: block;
   }
 

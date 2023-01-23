@@ -38,7 +38,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 28px;
+    padding-bottom: 27px;
   }
 
   @media (min-width: @desktop-width) {
@@ -55,8 +55,14 @@
 }
 
 .additional-products__card {
+  & a {
+    text-decoration: none;
+    text-align: center;
+    display: block;
+  }
+
   @media (max-width: @mobile-width-only) {
-    & button {
+    & a {
       width: 100%;
     }
   }
@@ -64,7 +70,7 @@
   @media (min-width: @tablet-width) {
     padding: 0 40px;
 
-    & button {
+    & a {
       width: 100%;
     }
   }
@@ -74,7 +80,7 @@
     width: 100%;
     padding: 0;
 
-    & button {
+    & a {
       margin: 15px 0 17px 40px;
     }
   }
@@ -101,7 +107,7 @@
   list-style-type: none;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 69px;
+    margin-bottom: 71px;
   }
 
   @media (min-width: @desktop-width) {
@@ -177,7 +183,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 80px 35px 81px 35px;
+    padding: 75px 35px 80px;
     margin-left: -40px;
   }
 }
@@ -194,6 +200,7 @@
     font-size: 20px;
     line-height: 20px;
     padding: 25px 0 27px;
+    transform: scaleX(0.95) translateX(-6px);
   }
 }
 
@@ -222,9 +229,25 @@
 }
 
 .additive__item {
+  @media (max-width: @mobile-width-only) {
+    &:last-child pre {
+      white-space: normal;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     &:first-child {
-      padding-right: 49px;
+      padding-right: 51px;
+    }
+
+    &:last-child pre {
+      white-space: normal;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &:last-child pre {
+      white-space: pre;
     }
   }
 }
@@ -240,6 +263,10 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 74px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 87px;
   }
 }
 
@@ -329,7 +356,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    top: 62%;
+    top: 64%;
     right: 17%;
     text-align: center;
   }
