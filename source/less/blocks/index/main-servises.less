@@ -221,6 +221,15 @@
     transform: translateY(-50%);
   }
 
+  &:hover::after {
+    background: url("../img/icon_arrow-hover.svg") no-repeat;
+    width: 34px;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
   @media (max-width: @mobile-width-only) {
     padding-top: 37px;
 

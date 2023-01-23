@@ -55,8 +55,14 @@
 }
 
 .additional-products__card {
+  & a {
+    text-decoration: none;
+    text-align: center;
+    display: block;
+  }
+
   @media (max-width: @mobile-width-only) {
-    & button {
+    & a {
       width: 100%;
     }
   }
@@ -64,7 +70,7 @@
   @media (min-width: @tablet-width) {
     padding: 0 40px;
 
-    & button {
+    & a {
       width: 100%;
     }
   }
@@ -74,7 +80,7 @@
     width: 100%;
     padding: 0;
 
-    & button {
+    & a {
       margin: 15px 0 17px 40px;
     }
   }
@@ -177,7 +183,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 75px 35px 81px 35px;
+    padding: 75px 35px 80px;
     margin-left: -40px;
   }
 }
@@ -350,7 +356,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    top: 62%;
+    top: 64%;
     right: 17%;
     text-align: center;
   }

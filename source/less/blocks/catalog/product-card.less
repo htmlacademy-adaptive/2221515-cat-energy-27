@@ -3,8 +3,10 @@
   list-style-type: none;
   position: relative;
 
-  & button {
+  & a {
     width: 100%;
+    text-decoration: none;
+    text-align: center;
   }
 
   &:last-child .product-card__wrapper::after {
@@ -29,7 +31,7 @@
   }
 
   @media (max-width: @mobile-width-only) {
-    & button {
+    & a {
       margin: 0 0 25px;
     }
 
@@ -59,7 +61,7 @@
     flex-direction: column;
     align-items: center;
 
-    & button {
+    & a {
       margin: 33px 37px 39px 39px;
     }
 
@@ -79,6 +81,7 @@
       width: 100%;
       bottom: 0;
       right: 0;
+      z-index: -1;
     }
   }
 
@@ -87,7 +90,7 @@
     flex-direction: column;
     align-items: center;
 
-    & button {
+    & a {
       margin: 28px 37px 38px 39px;
     }
   }

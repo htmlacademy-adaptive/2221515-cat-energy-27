@@ -30,7 +30,7 @@
     position: absolute;
     content: "";
     top: 35%;
-    right: 15px;
+    right: 16px;
     fill: var(--basicWhiteColor);
     stroke: var(--basicBlackColor);
     transition: stroke 0.2s ease-in-out;
@@ -74,6 +74,9 @@ input {
   }
 
   &:focus-visible {
+    outline: none;
+    border: 2px solid var(--basicGrayColor);
+
     & + .field-name-svg {
       stroke: var(--primaryButtonColor);
     }
@@ -81,9 +84,18 @@ input {
     & + .field-weight-svg {
       stroke: var(--primaryButtonColor);
     }
+  }
 
-    border: 2px solid var(--basicGrayColor);
-    border-radius: 0;
+  &.input-error {
+    border: 2px solid var(--errorColor);
+
+    &:focus-visible + .field-name-svg {
+      stroke: var(--errorColor);
+    }
+
+    &:focus-visible + .field-weight-svg {
+      stroke: var(--errorColor);
+    }
   }
 }
 
@@ -97,24 +109,42 @@ input {
   @media (min-width: @tablet-width) {
     padding-left: 61px;
   }
+
+  &.disabled {
+    opacity: 0.3;
+  }
 }
 
 .control-input[type="checkbox"] {
-  & + .control-label {
-    &::before {
-      position: absolute;
-      content: "";
-      width: 28px;
-      height: 28px;
-      border: 1px solid var(--fifthGrayColor);
-      top: -2px;
-      left: 0;
+  & + .control-label::before {
+    position: absolute;
+    content: "";
+    width: 28px;
+    height: 28px;
+    border: 1px solid var(--fifthGrayColor);
+    top: -2px;
+    left: 0;
 
-      @media (min-width: @tablet-width) {
-        width: 38px;
-        height: 38px;
-        top: -8px;
-      }
+    @media (min-width: @tablet-width) {
+      width: 38px;
+      height: 38px;
+      top: -8px;
+    }
+  }
+
+  &:hover + .control-label::before {
+    position: absolute;
+    content: "";
+    width: 28px;
+    height: 28px;
+    border: 1px solid var(--seventhGrayColor);
+    top: -2px;
+    left: 0;
+
+    @media (min-width: @tablet-width) {
+      width: 38px;
+      height: 38px;
+      top: -8px;
     }
   }
 
@@ -139,22 +169,20 @@ input {
 }
 
 .control-input[type="radio"] {
-  & + .control-label {
-    &::before {
-      position: absolute;
-      content: "";
-      width: 28px;
-      height: 28px;
-      border: 1px solid var(--fifthGrayColor);
-      top: -2px;
-      left: 0;
-      border-radius: 50%;
+  & + .control-label::before {
+    position: absolute;
+    content: "";
+    width: 28px;
+    height: 28px;
+    border: 1px solid var(--fifthGrayColor);
+    top: -2px;
+    left: 0;
+    border-radius: 50%;
 
-      @media (min-width: @tablet-width) {
-        width: 40px;
-        height: 40px;
-        top: -4px;
-      }
+    @media (min-width: @tablet-width) {
+      width: 40px;
+      height: 40px;
+      top: -4px;
     }
   }
 
@@ -175,6 +203,23 @@ input {
       height: 40px;
       box-shadow: inset 0 0 0 10px var(--basicWhiteColor),
         inset 0 0 0 22px var(--primaryButtonColor);
+      top: -4px;
+    }
+  }
+
+  &:hover + .control-label::before {
+    position: absolute;
+    content: "";
+    width: 28px;
+    height: 28px;
+    border: 1px solid var(--seventhGrayColor);
+    top: -2px;
+    left: 0;
+    border-radius: 50%;
+
+    @media (min-width: @tablet-width) {
+      width: 40px;
+      height: 40px;
       top: -4px;
     }
   }

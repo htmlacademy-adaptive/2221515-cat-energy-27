@@ -9,10 +9,26 @@
   &--primary {
     color: var(--basicWhiteColor);
     background-color: var(--primaryButtonColor);
+
+    &:hover {
+      background-color: var(--thirdButtonColor);
+    }
+
+    &:active .button__text {
+      opacity: 0.3;
+    }
   }
 
   &--secondary {
     color: var(--basicGrayColor);
     background-color: var(--secondaryButtonColor);
+
+    &:hover {
+      background-color: var(--secondaryGrayColor);
+    }
+
+    &:active .button__text {
+      opacity: 0.3;
+    }
   }
 }

@@ -70,7 +70,7 @@
   @media (min-width: @desktop-width) {
     display: flex;
     font-size: 20px;
-    line-height: 20px;
+    line-height: 30px;
   }
 }
 
@@ -123,6 +123,14 @@
   text-decoration: none;
   color: var(--basicBlackColor);
 
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: @tablet-width) {
     & {
       position: relative;
@@ -133,7 +141,7 @@
         content: "";
         height: 2px;
         background-color: var(--primaryButtonColor);
-        bottom: 4px;
+        bottom: 2px;
         left: 0;
         right: 0;
       }
