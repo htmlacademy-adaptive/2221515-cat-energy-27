@@ -354,6 +354,15 @@
   width: 40px;
   transform: translateX(-50%);
   z-index: 2;
+  color: var(--sixthGrayColor);
+
+  &:hover {
+    color: var(--primaryButtonColor);
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 
   &--mobile {
     height: 256px;
@@ -376,37 +385,5 @@
       top: 36px;
       left: 64.5%;
     }
-  }
-
-  & .curtain-svg__line {
-    fill: var(--sixthGrayColor);
-  }
-
-  & .curtain-svg__triangles {
-    fill: var(--sixthGrayColor);
-  }
-
-  & .curtain-svg__stroke {
-    stroke: var(--sixthGrayColor);
-  }
-
-  &:hover .curtain-svg__line,
-  &:hover .curtain-svg__triangles {
-    fill: var(--primaryButtonColor);
-  }
-
-  &:hover .curtain-svg__stroke {
-    stroke: var(--primaryButtonColor);
-  }
-
-  &:active .curtain-svg__line,
-  &:active .curtain-svg__triangles {
-    fill: var(--primaryButtonColor);
-    opacity: 0.6;
-  }
-
-  &:active .curtain-svg__stroke {
-    stroke: var(--primaryButtonColor);
-    opacity: 0.6;
   }
 }
