@@ -21,7 +21,7 @@
 }
 
 .general-info__title {
-  font-family: "oswald-medium", sans-serif;
+  font-family: "oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 36px;
@@ -31,21 +31,18 @@
 
   @media (max-width: @mobile-width-only) {
     padding: 22px 0 42px 0;
-    transform: scaleX(0.93) translateX(-10px);
   }
 
   @media (min-width: @tablet-width) {
     font-size: 60px;
     line-height: 60px;
-    padding: 47px 0 0 0;
-    transform: scaleX(0.93) translateX(-25px);
+    padding: 45px 0 0 0;
   }
 
   @media (min-width: @desktop-width) {
     font-size: 60px;
     line-height: 60px;
-    padding: 71px 0 0 0;
-    transform: scaleX(0.93) translateX(-45px);
+    padding: 70px 0 0 0;
   }
 }
 
@@ -81,6 +78,7 @@
   @media (max-width: @mobile-width-only) {
     padding-left: 80px;
     min-height: 60px;
+    line-height: 14px;
 
     &--healthy-diet::before {
       background-image: url("../img/card1-mobile.svg");
@@ -119,7 +117,7 @@
     padding-right: 100px;
     padding-top: 182px;
     max-width: 50%;
-    margin-bottom: 63px;
+    margin-bottom: 61px;
 
     &--healthy-diet::before {
       background-image: url("../img/card1-tablet.svg");
@@ -147,7 +145,7 @@
 
     &::after {
       position: absolute;
-      font-family: "oswald-medium", sans-serif;
+      font-family: "oswald", "Arial", sans-serif;
       font-size: 280px;
       line-height: 280px;
       font-weight: 400;
@@ -212,7 +210,7 @@
 }
 
 .general-info__text {
-  font-family: "lato", sans-serif;
+  font-family: "lato", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -224,7 +222,6 @@
   }
 
   @media (min-width: @desktop-width) {
-    font-size: 16px;
     line-height: 24px;
   }
 }

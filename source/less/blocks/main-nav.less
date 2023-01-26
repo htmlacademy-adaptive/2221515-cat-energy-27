@@ -61,6 +61,7 @@
     font-size: 18px;
     line-height: 26px;
     align-items: center;
+    font-weight: 400;
   }
 
   @media (min-width: @desktop-width) {
@@ -99,10 +100,14 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding: 0 17px;
+    padding: 0 17px 0 16px;
 
-    &:nth-child(2) {
-      margin-right: 2px;
+    .catalog-header & {
+      padding: 0 17px 0 19px;
+    }
+
+    .index-header & {
+      padding: 0 18px 0 16px;
     }
   }
 

@@ -59,7 +59,7 @@
 
   &--catalog,
   &--form {
-    padding-top: 27px;
+    padding-top: 25px;
 
     @media (min-width: @tablet-width) {
       padding-top: 0;
@@ -76,7 +76,8 @@
       }
 
       @media (min-width: @desktop-width) {
-        padding-right: 90px;
+        padding-right: 87px;
+        padding-left: 3px;
       }
     }
 
@@ -88,6 +89,7 @@
 
       @media (min-width: @desktop-width) {
         padding-top: 10px;
+        padding-left: 10px;
         margin-top: 5px;
       }
     }
@@ -104,7 +106,7 @@
   }
 
   &__text {
-    font-family: "oswald-medium", sans-serif;
+    font-family: "oswald", "Arial", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -112,29 +114,30 @@
     color: var(--basicBlackColor);
     text-transform: uppercase;
 
-    @media (max-width: @mobile-width-only) {
-      transform: scaleX(0.96) translateX(-3px);
-    }
-
     @media (min-width: @tablet-width) {
       font-size: 20px;
       line-height: 26px;
-      transform: scaleX(0.93) translateX(-5px);
 
       .page-footer--index & {
-        padding-top: 7px;
+        padding-top: 6px;
+        padding-left: 1px;
       }
     }
 
     @media (min-width: @desktop-width) {
       padding-right: 87px;
       padding-top: 0;
+
+      .page-footer--index & {
+        padding-top: 10px;
+        padding-left: 3px;
+      }
     }
   }
 }
 
 .coop-filling__adress {
-  font-family: "lato", sans-serif;
+  font-family: "lato", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;

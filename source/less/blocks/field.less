@@ -1,5 +1,5 @@
 .oswald() {
-  font-family: "oswald-medium", "Arial", sans-serif;
+  font-family: "oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
 }
@@ -15,40 +15,44 @@
 
   @media (max-width: @mobile-width-only) {
     height: 45px;
-    padding-left: 16px;
+    padding-left: 25px;
   }
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 20px;
     height: 52px;
-    padding-left: 16px;
+    padding-left: 21px;
   }
 
   &-name-svg,
   &-weight-svg {
     position: absolute;
     content: "";
-    top: 35%;
+    top: 33%;
     right: 16px;
     fill: var(--basicWhiteColor);
     stroke: var(--basicBlackColor);
     transition: stroke 0.2s ease-in-out;
+
+    @media (min-width: @tablet-width) {
+      top: 37%;
+    }
   }
 
   .field-name& {
-    padding-left: 9px;
+    padding-left: 15px;
 
     @media (min-width: @tablet-width) {
-      padding-left: 16px;
+      padding-left: 21px;
     }
   }
 
   .field-weight& {
-    padding-left: 9px;
+    padding-left: 15px;
 
     @media (min-width: @tablet-width) {
-      padding-left: 13px;
+      padding-left: 20px;
     }
   }
 }

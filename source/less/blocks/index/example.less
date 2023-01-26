@@ -19,6 +19,10 @@
       left: 0;
       right: 0;
     }
+
+    &__cost {
+      padding-right: 2px;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -31,7 +35,7 @@
     }
 
     &__cost {
-      margin-left: -21px;
+      margin-left: 2px;
     }
 
     &::before {
@@ -73,38 +77,33 @@
 }
 
 .example__title {
-  font-family: "oswald-medium", sans-serif;
+  font-family: "oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 36px;
   line-height: 40px;
   color: var(--basicBlackColor);
   margin: 0;
-  padding-top: 25px;
+  padding-top: 24px;
   padding-bottom: 40px;
-
-  @media (max-width: @mobile-width-only) {
-    transform: scaleX(0.93) translateX(-10px);
-  }
 
   @media (min-width: @tablet-width) {
     font-size: 60px;
     line-height: 60px;
     padding-top: 43px;
     padding-bottom: 63px;
-    transform: scaleX(0.93) translateX(-26px);
   }
 
   @media (min-width: @desktop-width) {
     font-size: 60px;
     line-height: 60px;
-    padding: 35px 0 146px 10px;
+    padding: 32px 0 146px 0;
   }
 }
 
 .example__text {
   display: block;
-  font-family: "lato", sans-serif;
+  font-family: "lato", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -121,7 +120,7 @@
     font-size: 16px;
     line-height: 24px;
     max-width: 433px;
-    padding-bottom: 84px;
+    padding-bottom: 86px;
   }
 }
 
@@ -151,7 +150,7 @@
 }
 
 .example-card__mean {
-  font-family: "oswald-medium", sans-serif;
+  font-family: "oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -201,7 +200,7 @@
 .example-card__description {
   position: absolute;
   content: "";
-  font-family: "lato", sans-serif;
+  font-family: "lato", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -265,7 +264,7 @@
 
 .example__conclusion {
   display: block;
-  font-family: "oswald-medium", sans-serif;
+  font-family: "oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -285,7 +284,6 @@
     flex-direction: column;
     align-items: flex-end;
     margin-top: -40px;
-    transform: scaleX(0.96) translateX(14px);
   }
 
   @media (min-width: @desktop-width) {
@@ -399,7 +397,7 @@
     }
 
     @media (min-width: @desktop-width) {
-      top: 36px;
+      top: 33px;
     }
   }
 }
