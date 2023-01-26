@@ -20,13 +20,17 @@
     @media (max-width: @mobile-width-only) {
       width: 30px;
       height: 30px;
-      top: 30px;
+      top: 25px;
     }
 
     @media (min-width: @tablet-width) {
       height: 60px;
       width: 60px;
       top: 160px;
+    }
+
+    @media (min-width: @tablet-width) {
+      top: 156px;
     }
   }
 
@@ -62,7 +66,7 @@
     align-items: center;
 
     & a {
-      margin: 33px 37px 39px 39px;
+      margin: 34px 37px 39px 39px;
     }
 
     &:not(:last-child) .product-card__wrapper {
@@ -91,7 +95,7 @@
     align-items: center;
 
     & a {
-      margin: 28px 37px 38px 39px;
+      margin: 33px 37px 38px 39px;
     }
   }
 }
@@ -176,6 +180,8 @@
   @media (min-width: @desktop-width) {
     line-height: 21px;
     padding-left: 12px;
+    padding-top: 14px;
+    padding-bottom: 8px;
 
     & br {
       display: none;
@@ -214,10 +220,6 @@
     max-width: 320px;
     padding: 0 20px;
     box-sizing: border-box;
-  }
-
-  @media (min-width: @tablet-width) {
-    height: 537px;
   }
 }
 

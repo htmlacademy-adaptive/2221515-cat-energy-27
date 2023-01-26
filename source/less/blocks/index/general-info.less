@@ -82,19 +82,19 @@
     padding-left: 80px;
     min-height: 60px;
 
-    &.info-card--1::before {
+    &--healthy-diet::before {
       background-image: url("../img/card1-mobile.svg");
     }
 
-    &.info-card--2::before {
+    &--soluble::before {
       background-image: url("../img/card2-mobile.svg");
     }
 
-    &.info-card--3::before {
+    &--nutrient::before {
       background-image: url("../img/card3-mobile.svg");
     }
 
-    &.info-card--4::before {
+    &--profit::before {
       background-image: url("../img/card4-mobile.svg");
     }
 
@@ -116,25 +116,24 @@
   }
 
   @media (min-width: @tablet-width) {
-    height: 280px;
     padding-right: 100px;
     padding-top: 182px;
     max-width: 50%;
-    margin-bottom: 37px;
+    margin-bottom: 63px;
 
-    &.info-card--1::before {
+    &--healthy-diet::before {
       background-image: url("../img/card1-tablet.svg");
     }
 
-    &.info-card--2::before {
+    &--soluble::before {
       background-image: url("../img/card2-tablet.svg");
     }
 
-    &.info-card--3::before {
+    &--nutrient::before {
       background-image: url("../img/card3-tablet.svg");
     }
 
-    &.info-card--4::before {
+    &--profit::before {
       background-image: url("../img/card4-tablet.svg");
     }
 
@@ -160,19 +159,19 @@
       z-index: -1;
     }
 
-    &.info-card--1::after {
+    &--healthy-diet::after {
       content: "1";
     }
 
-    &.info-card--2::after {
+    &--soluble::after {
       content: "2";
     }
 
-    &.info-card--3::after {
+    &--nutrient::after {
       content: "3";
     }
 
-    &.info-card--4::after {
+    &--profit::after {
       content: "4";
     }
 
@@ -188,7 +187,6 @@
   }
 
   @media (min-width: @desktop-width) {
-    height: 280px;
     padding-right: 40px;
     padding-top: 183px;
     max-width: 100%;
@@ -213,7 +211,7 @@
   }
 }
 
-.info-card__text {
+.general-info__text {
   font-family: "lato", sans-serif;
   font-style: normal;
   font-weight: 400;

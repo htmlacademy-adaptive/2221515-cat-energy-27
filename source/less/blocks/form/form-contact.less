@@ -1,11 +1,11 @@
 .lato() {
-  font-family: "lato", sans-serif;
+  font-family: "lato", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
 }
 
 .oswald() {
-  font-family: "oswald-medium", sans-serif;
+  font-family: "oswald-medium", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
 }
@@ -142,6 +142,10 @@
     padding-bottom: 146px;
     padding-top: 25px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 23px;
+  }
 }
 
 .form-contact__field {
@@ -267,13 +271,38 @@
   }
 }
 
-.form-filter-item {
+.form-filter__contact-item {
   @media (max-width: @mobile-width-only) {
     padding-top: 18px;
   }
 
   @media (min-width: @tablet-width) {
     padding: 21px 0;
+  }
+}
+
+.form-contact__additionally-filling {
+  display: flex;
+
+  @media (max-width: @mobile-width-only) {
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: @tablet-width) {
+    max-width: @tablet-width;
+    margin: 0 auto;
+    padding: 0 30px;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: @desktop-width;
+    margin: 0 auto;
+    padding: 0 110px;
+    box-sizing: border-box;
   }
 }
 
@@ -344,32 +373,7 @@
   }
 }
 
-.title-additionally__wrapper {
-  display: flex;
-
-  @media (max-width: @mobile-width-only) {
-    max-width: 320px;
-    margin: 0 auto;
-    padding: 0 20px;
-    box-sizing: border-box;
-  }
-
-  @media (min-width: @tablet-width) {
-    max-width: @tablet-width;
-    margin: 0 auto;
-    padding: 0 30px;
-    box-sizing: border-box;
-  }
-
-  @media (min-width: @desktop-width) {
-    max-width: @desktop-width;
-    margin: 0 auto;
-    padding: 0 110px;
-    box-sizing: border-box;
-  }
-}
-
-.form-filter-list {
+.form-filter__contact-list {
   .oswald();
   text-transform: uppercase;
   margin: 0;

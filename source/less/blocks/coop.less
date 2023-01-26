@@ -3,6 +3,10 @@
 
   @media (min-width: @tablet-width) {
     padding-top: 60px;
+
+    .page-footer--index & {
+      padding-top: 0;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -34,7 +38,7 @@
   @media (min-width: @tablet-width) {
     margin: 0 auto;
     max-width: @tablet-width;
-    padding: 90px 70px 60px;
+    padding: 55px 70px 60px;
     box-sizing: border-box;
   }
 
@@ -50,6 +54,7 @@
     background-color: var(--basicWhiteColor);
     transform: translateY(-50%);
     padding: 60px 73px;
+    z-index: 2;
   }
 
   &--catalog,
@@ -200,4 +205,10 @@
       height: 400px;
     }
   }
+}
+
+.coop__map-nojs {
+  display: none;
+  position: relative;
+  margin: 0 auto;
 }

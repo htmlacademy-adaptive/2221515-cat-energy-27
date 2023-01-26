@@ -3,6 +3,7 @@
   margin: 0 auto;
   max-width: 320px;
   box-sizing: border-box;
+  width: 100%;
 
   @media (min-width: @tablet-width) {
     max-width: @tablet-width;
@@ -30,6 +31,7 @@
   padding: 0;
   list-style-type: none;
   margin-top: 20px;
+  background-color: var(--primaryBackgrColor);
 
   @media (max-width: @mobile-width-only) {
     &:first-child .servise__title::before {
@@ -48,7 +50,7 @@
       background: url("/img/cat_gym.svg") no-repeat;
       width: 67px;
       height: 50px;
-      top: 20px;
+      top: 23px;
       left: -7px;
     }
   }
@@ -56,10 +58,12 @@
   @media (min-width: @tablet-width) {
     & {
       margin-top: 30px;
+      padding: 0 320px 0 53px;
     }
 
     &:first-child {
       margin-top: 0;
+      padding: 0 323px 0 53px;
     }
 
     &:first-child .servise__title::before {
@@ -71,7 +75,7 @@
       width: 200px;
       height: 211px;
       top: 80px;
-      right: 38px;
+      left: 427px;
       transform: scaleX(1.06);
     }
 
@@ -82,17 +86,19 @@
       background-size: 268px 200px;
       width: 268px;
       height: 200px;
-      top: 90px;
-      right: 2px;
+      top: 94px;
+      left: 393px;
       transform: scaleX(1.06);
     }
   }
 
   @media (min-width: @desktop-width) {
-    width: 50%;
+    width: 100%;
+    padding: 0 30px 0 52px;
 
     &:first-child {
       margin-top: 30px;
+      padding: 0 30px 0 52px;
     }
 
     & + &:nth-child(2n) {
@@ -107,7 +113,7 @@
       width: 100px;
       height: 106px;
       top: 45px;
-      left: 58px;
+      left: 5px;
     }
 
     & .servise__title::before {
@@ -118,30 +124,31 @@
       width: 134px;
       height: 100px;
       top: 46px;
-      left: 37px;
+      left: -12px;
     }
   }
 }
 
 .main-servises__link {
-  background-color: var(--primaryBackgrColor);
-  height: 266px;
+  min-height: 266px;
+  position: relative;
 
   @media (max-width: @mobile-width-only) {
     padding: 0 20px;
   }
 
   @media (min-width: @tablet-width) {
-    height: 372px;
+    min-height: 372px;
+    max-width: 350px;
   }
 
   @media (min-width: @desktop-width) {
-    height: 374px;
+    min-height: 374px;
+    max-width: 460px;
   }
 }
 
 .servise__title {
-  position: relative;
   font-family: "oswald-medium", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -159,14 +166,15 @@
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
-    padding: 77px 429px 24px 53px;
+    padding: 77px 20px 24px 7px;
     transform: scaleX(0.95) translateX(-16px);
   }
 
   @media (min-width: @desktop-width) {
     font-size: 36px;
     line-height: 36px;
-    padding: 77px 0 73px 225px;
+    padding: 77px 40px 73px 174px;
+    max-width: 464px;
   }
 }
 
@@ -187,13 +195,11 @@
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 24px;
-    padding-left: 52px;
   }
 
   @media (min-width: @desktop-width) {
     font-size: 16px;
     line-height: 24px;
-    padding-right: 65px;
 
     & br {
       display: none;
@@ -216,7 +222,7 @@
     background: url("../img/icon_arrow.svg") no-repeat;
     width: 24px;
     height: 12px;
-    bottom: 0;
+    top: 50px;
     left: 100px;
     transform: translateY(-50%);
   }
@@ -231,7 +237,8 @@
   }
 
   @media (max-width: @mobile-width-only) {
-    padding-top: 37px;
+    padding: 37px 30px 19px 0;
+    max-width: 100px;
 
     &::before {
       position: absolute;
@@ -240,21 +247,27 @@
       background-color: var(--thirdGrayColor);
       top: 20px;
       left: 0;
-      right: 0;
+      width: 240px;
     }
   }
 
   @media (min-width: @tablet-width) {
-    padding: 52px 0 0 52px;
+    padding: 54px 50px 55px 9px;
     font-size: 20px;
+    max-width: 120px;
     transform: scaleX(0.96) translateX(-12px);
 
     &::after {
-      left: 189px;
+      left: 145px;
+      top: 68px;
     }
   }
 
   @media (min-width: @desktop-width) {
-    padding: 27px 0 0 54px;
+    padding: 28px 0 58px 9px;
+
+    &::after {
+      top: 43px;
+    }
   }
 }

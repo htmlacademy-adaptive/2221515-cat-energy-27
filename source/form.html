@@ -9,9 +9,12 @@
   <link rel="icon" href="favicon.ico">
   <link rel="icon" type="image/svg+xml" href="img/favicons/32.svg">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="fonts/lato/Lato-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswaldmedium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswaldregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
 </head>
 
-<div class="body-main nojs">
+<body class="body-main nojs">
   <div class="wrapper">
     <header class="page-header">
       <div class="page-header__logo-wrapper">
@@ -68,7 +71,7 @@
             </div>
           </div>
           <div class="form-program__weight">
-            <fieldset class="form-filter">
+            <fieldset class="form-program__form-filter form-filter">
               <ul class="form-filter__list">
                 <li class="form-filter__item">
                   <label class="control">
@@ -128,32 +131,32 @@
           </div>
         </div>
         <div class="form-contact__additionally">
-          <div class="title-additionally__wrapper">
+          <div class="form-contact__additionally-filling">
             <h2 class="form-contact__title title-additionally">
               Дополнительно
             </h2>
           </div>
-          <fieldset class="form-filter">
-            <ul class="form-filter-list">
-              <li class="form-filter-item">
+          <fieldset class="form-contact__form-filter form-filter">
+            <ul class="form-filter__contact-list">
+              <li class="form-filter__contact-item">
                 <label class="control">
                   <input class="control-input visually-hidden" type="checkbox" name="sweetener" checked>
                   <span class="control-label">сахарозаменитель</span>
                 </label>
               </li>
-              <li class="form-filter-item">
+              <li class="form-filter__contact-item">
                 <label class="control">
                   <input class="control-input visually-hidden" type="checkbox" name="drinking water">
                   <span class="control-label">питьевая вода</span>
                 </label>
               </li>
-              <li class="form-filter-item">
+              <li class="form-filter__contact-item">
                 <label class="control">
                   <input class="control-input visually-hidden" type="checkbox" name="milk">
                   <span class="control-label">молоко</span>
                 </label>
               </li>
-              <li class="form-filter-item">
+              <li class="form-filter__contact-item">
                 <label class="control">
                   <input class="control-input visually-hidden" type="checkbox" name="vitamins">
                   <span class="control-label">витамины</span>
@@ -186,6 +189,21 @@
           <iframe
             src="https://yandex.ru/map-widget/v1/?um=constructor%3A64b5a98fc7e1a5310a059b8a6228923e4e9bf7f1487f33a15f38be3012bec41d&amp;source=constructor">
           </iframe>
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)"
+              srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x" width="1440" height="400">
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="img/map-tablet.webp 1x, img/map-tablet@2x.webp 2x" width="768" height="400">
+            <source type="image/webp" srcset="img/map-mobile.webp 1x, img/map-mobile@2x.webp 2x" width="320"
+              height="362">
+
+            <source media="(min-width: 1440px)" srcset="img/map-desktop.png 1x, img/map-desktop@2x.png 2x" width="1440"
+              height="400">
+            <source media="(min-width: 768px)" srcset="img/map-tablet.png 1x, img/map-tablet@2x.png 2x" width="768"
+              height="400">
+            <img class="coop__map-nojs" src="img/map-mobile.png" srcset="img/map-mobile@2x.png 2x" width="320"
+              height="362" alt="Где мы находимся.">
+          </picture>
         </div>
       </div>
       <div class="page-footer__social-filling">
@@ -193,29 +211,32 @@
           <div class="page-footer__social-wrapper">
             <div class="page-footer__logo">
               <picture>
+                <source media="(min-width: 1440px)" srcset="img/logo-text-tablet.svg" width="143" height="26">
                 <source media="(min-width: 768px)" srcset="img/logo-text-tablet.svg" width="143" height="26">
-                <img src="img/logo-text.svg" width="128" height="24" alt="Кэт энерджи.">
+                <img src="img/logo-text.svg" width="128" height="24" alt="Логотип энерджи.">
               </picture>
             </div>
             <div class="page-footer__social social">
               <ul class="social__list">
                 <li class="social__item">
                   <a class="social__link social__link--vk" href="https://vk.ru/htmlacademy">
-                    <svg class="svg-vk" width="28" height="22">
+                    <svg class="svg-vk" width="28" height="22" role="img"
+                      aria-label="Иконка с ссылкой на канал в вконтакте ">
                       <use href="img/sprite.svg#link-vk"></use>
                     </svg>
                   </a>
                 </li>
                 <li class="social__item">
                   <a class="social__link social__link--yt" href="https://www.youtube.com/user/htmlacademyru">
-                    <svg class="svg-yt" width="28" height="22">
+                    <svg class="svg-yt" width="28" height="22" role="img" aria-label="Иконка с ссылкой на ютьюб канал">
                       <use href="img/sprite.svg#link-yt"></use>
                     </svg>
                   </a>
                 </li>
                 <li class="social__item">
                   <a class="social__link social__link--tg" href="https://t.me/htmlacademy">
-                    <svg class="svg-tg" width="28" height="22">
+                    <svg class="svg-tg" width="28" height="22" role="img"
+                      aria-label="Иконка с ссылкой на телеграмм канал">
                       <use href="img/sprite.svg#link-tg"></use>
                     </svg>
                   </a>
@@ -225,8 +246,8 @@
           </div>
           <div class="page-footer__copyright copyright">
             <a class="copyright__link" href="https://htmlacademy.ru/">HTML Academy
-              <div class="copyright__link--logo" href="https://htmlacademy.ru/">
-                <svg class="copyright__link--logo-svg" width="27" height="34">
+              <div class="copyright__logo-container">
+                <svg class="copyright__logo-svg" width="27" height="34" role="img" aria-label="Логотип htmlacademy">
                   <use href="img/sprite.svg#copyright-logo"></use>
                 </svg>
               </div>
@@ -237,6 +258,6 @@
     </footer>
   </div>
   <script src="/js/script.js"></script>
-  </body>
+</body>
 
 </html>

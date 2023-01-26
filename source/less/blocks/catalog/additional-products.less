@@ -1,11 +1,11 @@
 .lato() {
-  font-family: "lato", sans-serif;
+  font-family: "lato", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
 }
 
 .oswald() {
-  font-family: "oswald-medium", sans-serif;
+  font-family: "oswald-medium", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
 }
@@ -61,18 +61,8 @@
     display: block;
   }
 
-  @media (max-width: @mobile-width-only) {
-    & a {
-      width: 100%;
-    }
-  }
-
   @media (min-width: @tablet-width) {
     padding: 0 40px;
-
-    & a {
-      width: 100%;
-    }
   }
 
   @media (min-width: @desktop-width) {
@@ -82,6 +72,8 @@
 
     & a {
       margin: 15px 0 17px 40px;
+      width: 100%;
+      font-size: 16px;
     }
   }
 }
@@ -183,7 +175,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 75px 35px 80px;
+    padding: 77px 35px 80px;
     margin-left: -40px;
   }
 }
@@ -270,15 +262,23 @@
   }
 }
 
-.additive-get-all-background {
+.additive-get-all__background {
+  position: relative;
   width: 280px;
   height: 290px;
-  background-color: var(--thirdBackgrColor);
+  z-index: -1;
+
+  &-img {
+    position: absolute;
+    display: block;
+    z-index: -2;
+    margin: 0 auto;
+  }
 
   &::before {
     position: absolute;
     content: "";
-    background: url("../img/background-cat-case-mobile.jpg") no-repeat 50% 50%;
+    background-color: var(--thirdBackgrColor);
     top: 0;
     right: 0;
     width: 280px;
@@ -313,9 +313,6 @@
     height: 200px;
 
     &::before {
-      background: url("../img/background-cat-case-tablet.jpg") no-repeat 50% 50%;
-      top: 0;
-      right: 0;
       width: 707px;
       height: 200px;
     }
@@ -326,9 +323,6 @@
     height: 289px;
 
     &::before {
-      background: url("../img/background-cat-case-desktop.jpg") no-repeat 50% 50%;
-      top: 0;
-      right: 0;
       width: 245px;
       height: 289px;
     }
