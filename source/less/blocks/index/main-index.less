@@ -11,37 +11,11 @@
   }
 }
 
-.main-index__background {
+.main-index__background-container {
   position: absolute;
   content: "";
-  background-color: var(--fourthBackgrColor);
   width: 100%;
   height: 305px;
-  z-index: -2;
-
-  &-img {
-    content: "";
-    top: 0;
-    z-index: -2;
-
-    @media (max-width: @mobile-width-only) {
-      display: block;
-      margin: 0 auto;
-    }
-
-    @media (min-width: @desktop-width) {
-      position: absolute;
-      right: 0;
-    }
-  }
-
-  &::before {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 305px;
-    background-color: var(--thirdBackgrColor);
-  }
 
   @media (min-width: @tablet-width) {
     display: none;
@@ -49,19 +23,72 @@
 
   @media (min-width: @desktop-width) {
     display: flex;
-    background-image: linear-gradient(to right, var(--basicWhiteColor) 50.02%, var(--fourthBackgrColor) 50.02% 100%);
     height: 694px;
     top: -182px;
     right: 0;
+    z-index: -2;
 
     &::before {
       position: absolute;
       content: "";
       height: 694px;
       background-color: var(--thirdBackgrColor);
-      z-index: -1;
       left: 50%;
       width: 50%;
+      z-index: -1;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      height: 694px;
+      background-color: var(--fourthBackgrColor);
+      left: 50%;
+      width: 50%;
+      z-index: -3;
+    }
+  }
+}
+
+.main-index__background {
+  position: absolute;
+  background-repeat: no-repeat;
+  right: 0;
+  width: 100%;
+  height: 305px;
+  z-index: -2;
+
+  @media (max-width: @mobile-width-only) {
+    background-color: var(--fourthBackgrColor);
+    background-position: center;
+    background-image: url("../img/background-cat-mobile.jpg");
+
+    @media (min-resolution: 2dppx) {
+      & {
+        background-image: url("../img/background-cat-mobile@2x.jpg");
+        background-size: 320px 302px;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 305px;
+      background-color: var(--thirdBackgrColor);
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/background-cat-desktop.jpg");
+    background-position: right;
+    height: 694px;
+
+    @media (min-resolution: 2dppx) {
+      & {
+        background-image: url("../img/background-cat-desktop@2x.jpg");
+        background-size: 720px 694px;
+      }
     }
   }
 }

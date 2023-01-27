@@ -47,19 +47,8 @@
 
     <main class="main-index">
       <div class="main-index__program-wrapper">
-        <div class="main-index__background">
-          <picture>
-            <source type="image/webp" media="(min-width: 1440px)"
-              srcset="img/background-cat-desktop.webp 1x, img/background-cat-desktop@2x.webp 2x" width="720"
-              height="694">
-            <source type="image/webp" srcset="img/background-cat-mobile.webp 1x, img/background-cat-mobile@2x.webp 2x"
-              width="320" height="302">
-
-            <source media="(min-width: 1440px)"
-              srcset="background-cat-desktop.jpg 1x, img/background-cat-desktop@2x.jpg 2x" width="720" height="694">
-            <img class="main-index__background-img" src="img/background-cat-mobile.jpg"
-              srcset="img/background-cat-mobile@2x.png 2x" alt="Кот на фоне." width="320" height="302">
-          </picture>
+        <div class="main-index__background-container">
+          <div class="main-index__background"></div>
         </div>
         <section class="main-index__program program">
           <h1 class="program__title">Функциональное<br>питание для котов</h1>
