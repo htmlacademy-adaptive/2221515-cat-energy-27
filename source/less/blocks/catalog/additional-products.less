@@ -264,12 +264,13 @@
   width: 280px;
   height: 290px;
   z-index: -1;
+  background-image: url("../img/background-cat-case-mobile.jpg");
 
-  &-img {
-    position: absolute;
-    display: block;
-    z-index: -2;
-    margin: 0 auto;
+  @media (min-resolution: 2dppx) {
+    & {
+      background-image: url("../img/background-cat-case-mobile@2x.jpg");
+      background-size: 280px 290px;
+    }
   }
 
   &::before {
@@ -309,6 +310,13 @@
     width: 707px;
     height: 200px;
 
+    @media (min-resolution: 2dppx) {
+      & {
+        background-image: url("../img/background-cat-case-tablet@2x.jpg");
+        background-size: 707px 200px;
+      }
+    }
+
     &::before {
       width: 707px;
       height: 200px;
@@ -318,6 +326,13 @@
   @media (min-width: @desktop-width) {
     width: 245px;
     height: 289px;
+
+    @media (min-resolution: 2dppx) {
+      & {
+        background-image: url("../img/background-cat-case-desktop@2x.jpg");
+        background-size: 245px 289px;
+      }
+    }
 
     &::before {
       width: 245px;
