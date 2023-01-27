@@ -9,11 +9,14 @@
   <link rel="icon" href="favicon.ico">
   <link rel="icon" type="image/svg+xml" href="img/favicons/32.svg">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="fonts/lato/Lato-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswaldmedium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswaldregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
 </head>
 
 <body class="body-main nojs">
   <div class="wrapper">
-    <header class="page-header">
+    <header class="page-header catalog-header">
       <div class="page-header__logo-wrapper">
         <a class="page-header__logo" href="index.html">
           <picture>
@@ -50,10 +53,21 @@
           <li class="product-catalog__item product-card">
             <div class="product-card__wrapper">
               <picture>
-                <source media="(min-width: 768px)" srcset="
-                    img/catalog-chicken500-tablet.png    1x,
-                    img/catalog-chicken500-tablet@2x.png 2x
-                  " width="168" height="200">
+                <source type="image/webp" media="(min-width: 1440px)"
+                  srcset=" img/catalog-chicken500-tablet.webp 1x, img/catalog-chicken500-tablet@2x.webp 2x" width="168"
+                  height="200">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset=" img/catalog-chicken500-tablet.webp 1x, img/catalog-chicken500-tablet@2x.webp 2x" width="168"
+                  height="200">
+                <source type="image/webp" srcset="img/catalog-chicken500.webp 1x, img/catalog-chicken500@2x.webp 2x"
+                  width="140" height="112">
+
+                <source media="(min-width: 1440px)"
+                  srcset=" img/catalog-chicken500-tablet.png 1x, img/catalog-chicken500-tablet@2x.png 2x" width="168"
+                  height="200">
+                <source media="(min-width: 768px)"
+                  srcset=" img/catalog-chicken500-tablet.png 1x, img/catalog-chicken500-tablet@2x.png 2x" width="168"
+                  height="200">
                 <img class="product-card__image" src="img/catalog-chicken500.png"
                   srcset="img/catalog-chicken500@2x.png 2x" width="140" height="112" alt="Курица 500 грамм.">
               </picture>
@@ -87,10 +101,21 @@
           <li class="product-catalog__item product-card">
             <div class="product-card__wrapper">
               <picture>
-                <source media="(min-width: 768px)" srcset="
-                    img/catalog-chicken1000-tablet.png    1x,
-                    img/catalog-chicken1000-tablet@2x.png 2x
-                  " width="168" height="200">
+                <source type="image/webp" media="(min-width: 1440px)"
+                  srcset=" img/catalog-chicken1000-tablet.webp 1x, img/catalog-chicken1000-tablet@2x.webp 2x"
+                  width="168" height="200">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset=" img/catalog-chicken1000-tablet.webp 1x, img/catalog-chicken1000-tablet@2x.webp 2x"
+                  width="168" height="200">
+                <source type="image/webp" srcset="img/catalog-chicken1000.webp 1x, img/catalog-chicken1000@2x.webp 2x"
+                  width="140" height="112">
+
+                <source media="(min-width: 1440px)"
+                  srcset="img/catalog-chicken1000-tablet.png 1x, img/catalog-chicken1000-tablet@2x.png 2x" width="168"
+                  height="200">
+                <source media="(min-width: 768px)"
+                  srcset="img/catalog-chicken1000-tablet.png 1x, img/catalog-chicken1000-tablet@2x.png 2x" width="168"
+                  height="200">
                 <img class="product-card__image" src="img/catalog-chicken1000.png"
                   srcset="img/catalog-chicken1000@2x.png 2x" width="140" height="112" alt="Курица 1 килограмм.">
               </picture>
@@ -124,9 +149,21 @@
           <li class="product-catalog__item product-card">
             <div class="product-card__wrapper">
               <picture>
-                <source media="(min-width: 768px)" srcset="
-                    img/catalog-fish500-tablet.png    1x,
-                    img/catalog-fish500-tablet@2x.png 2x" width="168" height="200">
+                <source type="image/webp" media="(min-width: 1440px)"
+                  srcset=" img/catalog-fish500-tablet.webp 1x, img/catalog-fish500-tablet@2x.webp 2x" width="168"
+                  height="200">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset=" img/catalog-fish500-tablet.webp 1x, img/catalog-fish500-tablet@2x.webp 2x" width="168"
+                  height="200">
+                <source type="image/webp" srcset="img/catalog-fish500.webp 1x, img/catalog-fish500@2x.webp 2x"
+                  width="140" height="112">
+
+                <source media="(min-width: 1440px)"
+                  srcset="img/catalog-fish500-tablet.png 1x, img/catalog-fish500-tablet@2x.png 2x" width="168"
+                  height="200">
+                <source media="(min-width: 768px)"
+                  srcset="img/catalog-fish500-tablet.png 1x, img/catalog-fish500-tablet@2x.png 2x" width="168"
+                  height="200">
                 <img class="product-card__image" src="img/catalog-fish500.png" srcset="img/catalog-fish500@2x.png 2x"
                   width="140" height="112" alt="Рыба 500 грамм.">
               </picture>
@@ -160,10 +197,21 @@
           <li class="product-catalog__item product-card">
             <div class="product-card__wrapper">
               <picture>
-                <source media="(min-width: 768px)" srcset="
-                    img/catalog-fish1000-tablet.png    1x,
-                    img/catalog-fish1000-tablet@2x.png 2x
-                  " width="168" height="200">
+                <source type="image/webp" media="(min-width: 1440px)"
+                  srcset=" img/catalog-fish1000-tablet.webp 1x, img/catalog-fish1000-tablet@2x.webp 2x" width="168"
+                  height="200">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset=" img/catalog-fish1000-tablet.webp 1x, img/catalog-fish1000-tablet@2x.webp 2x" width="168"
+                  height="200">
+                <source type="image/webp" srcset="img/catalog-fish1000.webp 1x, img/catalog-fish1000@2x.webp 2x"
+                  width="140" height="112">
+
+                <source media="(min-width: 1440px)"
+                  srcset="img/catalog-fish1000-tablet.png 1x, img/catalog-fish1000-tablet@2x.png 2x" width="168"
+                  height="200">
+                <source media="(min-width: 768px)"
+                  srcset="img/catalog-fish1000-tablet.png 1x, img/catalog-fish1000-tablet@2x.png 2x" width="168"
+                  height="200">
                 <img class="product-card__image" src="img/catalog-fish1000.png" srcset="img/catalog-fish1000@2x.png 2x"
                   width="140" height="112" alt="Рыба 1 килограмм.">
               </picture>
@@ -197,10 +245,21 @@
           <li class="product-catalog__item product-card">
             <div class="product-card__wrapper">
               <picture>
-                <source media="(min-width: 768px)" srcset="
-                    img/catalog-buckwheat500-tablet.png    1x,
-                    img/catalog-buckwheat500-tablet@2x.png 2x
-                  " width="168" height="200">
+                <source type="image/webp" media="(min-width: 1440px)"
+                  srcset=" img/catalog-buckwheat500-tablet.webp 1x, img/catalog-buckwheat500-tablet@2x.webp 2x"
+                  width="168" height="200">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset=" img/catalog-buckwheat500-tablet.webp 1x, img/catalog-buckwheat500-tablet@2x.webp 2x"
+                  width="168" height="200">
+                <source type="image/webp" srcset="img/catalog-buckwheat500.webp 1x, img/catalog-buckwheat500@2x.webp 2x"
+                  width="140" height="112">
+
+                <source media="(min-width: 1440px)"
+                  srcset="img/catalog-buckwheat500-tablet.png 1x, img/catalog-buckwheat500-tablet@2x.png 2x" width="168"
+                  height="200">
+                <source media="(min-width: 768px)"
+                  srcset="img/catalog-buckwheat500-tablet.png 1x, img/catalog-buckwheat500-tablet@2x.png 2x" width="168"
+                  height="200">
                 <img class="product-card__image" src="img/catalog-buckwheat500.png"
                   srcset="img/catalog-buckwheat500@2x.png 2x" width="140" height="112" alt="Гречка 500 грамм.">
               </picture>
@@ -234,10 +293,22 @@
           <li class="product-catalog__item product-card">
             <div class="product-card__wrapper">
               <picture>
-                <source media="(min-width: 768px)" srcset="
-                    img/catalog-buckwheat1000-tablet.png    1x,
-                    img/catalog-buckwheat1000-tablet@2x.png 2x
-                  " width="168" height="200">
+                <source type="image/webp" media="(min-width: 1440px)"
+                  srcset=" img/catalog-buckwheat1000-tablet.webp 1x, img/catalog-buckwheat1000-tablet@2x.webp 2x"
+                  width="168" height="200">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset=" img/catalog-buckwheat1000-tablet.webp 1x, img/catalog-buckwheat1000-tablet@2x.webp 2x"
+                  width="168" height="200">
+                <source type="image/webp"
+                  srcset="img/catalog-buckwheat1000.webp 1x, img/catalog-buckwheat1000@2x.webp 2x" width="140"
+                  height="112">
+
+                <source media="(min-width: 1440px)"
+                  srcset="img/catalog-buckwheat1000-tablet.png 1x, img/catalog-buckwheat1000-tablet@2x.png 2x"
+                  width="168" height="200">
+                <source media="(min-width: 768px)"
+                  srcset="img/catalog-buckwheat1000-tablet.png 1x, img/catalog-buckwheat1000-tablet@2x.png 2x"
+                  width="168" height="200">
                 <img class="product-card__image" src="img/catalog-buckwheat1000.png"
                   srcset="img/catalog-buckwheat1000@2x.png 2x" width="140" height="112" alt="Гречка 1 килограмм.">
               </picture>
@@ -271,10 +342,21 @@
           <li class="product-catalog__item product-card">
             <div class="product-card__wrapper">
               <picture>
-                <source media="(min-width: 768px)" srcset="
-                    img/catalog-rice500-tablet.png    1x,
-                    img/catalog-rice500-tablet@2x.png 2x
-                  " width="168" height="200">
+                <source type="image/webp" media="(min-width: 1440px)"
+                  srcset=" img/catalog-rice500-tablet.webp 1x, img/catalog-rice500-tablet@2x.webp 2x" width="168"
+                  height="200">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset=" img/catalog-rice500-tablet.webp 1x, img/catalog-rice500-tablet@2x.webp 2x" width="168"
+                  height="200">
+                <source type="image/webp" srcset="img/catalog-rice500.webp 1x, img/catalog-rice500@2x.webp 2x"
+                  width="140" height="112">
+
+                <source media="(min-width: 1440px)"
+                  srcset="img/catalog-rice500-tablet.png 1x, img/catalog-rice500-tablet@2x.png 2x" width="168"
+                  height="200">
+                <source media="(min-width: 768px)"
+                  srcset="img/catalog-rice500-tablet.png 1x, img/catalog-rice500-tablet@2x.png 2x" width="168"
+                  height="200">
                 <img class="product-card__image" src="img/catalog-rice500.png" srcset="img/catalog-rice500@2x.png 2x"
                   width="140" height="112" alt="Рис 500 грамм.">
               </picture>
@@ -391,7 +473,28 @@
             </li>
           </ul>
           <div class="additional-products__get-all additive-get-all">
-            <div class="additive-get-all-background"></div>
+            <div class="additive-get-all__background">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)"
+                  srcset="img/background-cat-case-desktop.webp 1x, img/background-cat-case-desktop@2x.webp 2x"
+                  width="246" height="289">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/background-cat-case-tablet.webp 1x, img/background-cat-case-tablet@2x.webp 2x" width="707"
+                  height="200">
+                <source type="image/webp"
+                  srcset="img/background-cat-case-mobile.webp 1x, img/background-cat-case-mobile@2x.webp 2x" width="279"
+                  height="289">
+
+                <source media="(min-width: 1440px)"
+                  srcset="img/background-cat-case-desktop.jpg 1x, img/background-cat-case-desktop@2x.jpg 2x" width="246"
+                  height="289">
+                <source media="(min-width: 768px)"
+                  srcset="img/background-cat-case-tablet.jpg 1x, img/background-cat-case-tablet@2x.jpg 2x" width="707"
+                  height="200">
+                <img class="additive-get-all__background-img" src="img/background-cat-case-mobile.jpg"
+                  srcset="img/background-cat-case-mobile@2x.jpg 2x" alt="Фоновый кот в чехле." width="279" height="289">
+              </picture>
+            </div>
             <span class="additive-get-all__text">
               Закажите все<br>
               и получите чехол для<br>
@@ -419,6 +522,21 @@
           <iframe
             src="https://yandex.ru/map-widget/v1/?um=constructor%3A64b5a98fc7e1a5310a059b8a6228923e4e9bf7f1487f33a15f38be3012bec41d&amp;source=constructor">
           </iframe>
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)"
+              srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x" width="1440" height="400">
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="img/map-tablet.webp 1x, img/map-tablet@2x.webp 2x" width="768" height="400">
+            <source type="image/webp" srcset="img/map-mobile.webp 1x, img/map-mobile@2x.webp 2x" width="320"
+              height="362">
+
+            <source media="(min-width: 1440px)" srcset="img/map-desktop.png 1x, img/map-desktop@2x.png 2x" width="1440"
+              height="400">
+            <source media="(min-width: 768px)" srcset="img/map-tablet.png 1x, img/map-tablet@2x.png 2x" width="768"
+              height="400">
+            <img class="coop__map-nojs" src="img/map-mobile.png" srcset="img/map-mobile@2x.png 2x" width="320"
+              height="362" alt="Где мы находимся.">
+          </picture>
         </div>
       </div>
       <div class="page-footer__social-filling">
@@ -426,17 +544,20 @@
           <div class="page-footer__social-wrapper">
             <div class="page-footer__logo">
               <picture>
+                <source media="(min-width: 1440px)" srcset="img/logo-text-tablet.svg" width="143" height="26">
                 <source media="(min-width: 768px)" srcset="img/logo-text-tablet.svg" width="143" height="26">
-                <img src="img/logo-text.svg" width="128" height="24" alt="Кэт энерджи.">
+                <img src="img/logo-text.svg" width="128" height="24" alt="Логотип энерджи.">
               </picture>
             </div>
             <div class="page-footer__social social">
               <ul class="social__list">
                 <li class="social__item">
                   <a class="social__link social__link--vk" href="https://vk.ru/htmlacademy">
-                    <svg class="svg-vk" width="28" height="22">
+                    <svg class="svg-vk" width="28" height="22" role="img"
+                      aria-label="Иконка с ссылкой на канал в вконтакте ">
                       <use href="img/sprite.svg#link-vk"></use>
                     </svg>
+                    <span class="visually-hidden">Иконка с ссылкой на канал в вконтакте.</span>
                   </a>
                 </li>
                 <li class="social__item">
@@ -444,6 +565,7 @@
                     <svg class="svg-yt" width="28" height="22">
                       <use href="img/sprite.svg#link-yt"></use>
                     </svg>
+                    <span class="visually-hidden">Иконка с ссылкой на ютьюб канал.</span>
                   </a>
                 </li>
                 <li class="social__item">
@@ -451,6 +573,7 @@
                     <svg class="svg-tg" width="28" height="22">
                       <use href="img/sprite.svg#link-tg"></use>
                     </svg>
+                    <span class="visually-hidden">Иконка с ссылкой на телеграмм канал.</span>
                   </a>
                 </li>
               </ul>
@@ -458,10 +581,11 @@
           </div>
           <div class="page-footer__copyright copyright">
             <a class="copyright__link" href="https://htmlacademy.ru/">HTML Academy
-              <div class="copyright__link--logo" href="https://htmlacademy.ru/">
-                <svg class="copyright__link--logo-svg" width="27" height="34">
+              <div class="copyright__logo-container">
+                <svg class="copyright__logo-svg" width="27" height="34" role="img" aria-label="Логотип htmlacademy">
                   <use href="img/sprite.svg#copyright-logo"></use>
                 </svg>
+                <span class="visually-hidden">Логотип htmlacademy.</span>
               </div>
             </a>
           </div>

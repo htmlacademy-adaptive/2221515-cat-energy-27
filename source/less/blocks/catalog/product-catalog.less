@@ -1,11 +1,11 @@
 .lato() {
-  font-family: "lato", sans-serif;
+  font-family: "lato", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
 }
 
 .oswald() {
-  font-family: "oswald-medium", sans-serif;
+  font-family: "oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
 }
@@ -34,10 +34,9 @@
   @media (max-width: @mobile-width-only) {
     margin: 0;
     padding: 30px 0 41px;
-    text-align: center;
-    transform: scaleX(0.93) translateX(-13px);
 
     &::before {
+      display: none;
       position: absolute;
       content: "";
       top: 0;
@@ -52,13 +51,11 @@
     font-size: 60px;
     line-height: 60px;
     text-align: left;
-    transform: scaleX(0.93) translateX(-27px);
     margin: 25px 0 55px 0;
   }
 
   @media (min-width: @desktop-width) {
-    transform: scaleX(0.93) translateX(-46px);
-    margin: 10px 0 56px 0;
+    margin: 7px 0 60px 0;
   }
 }
 
@@ -82,7 +79,7 @@
     display: grid;
     grid-template-columns: repeat(4, 245px);
     column-gap: 80px;
-    row-gap: 38px;
+    row-gap: 40px;
     max-width: @desktop-width;
     padding: 0 110px;
     margin: 0 auto;
@@ -106,12 +103,14 @@
     font-size: 20px;
     line-height: 22px;
     width: 65%;
-    padding-bottom: 20px;
+    padding-bottom: 23px;
+    padding-top: 269px;
   }
 
   @media (min-width: @desktop-width) {
     width: 100%;
     padding-bottom: 23px;
+    padding-top: 265px;
   }
 }
 
@@ -131,11 +130,11 @@
     font-size: 16px;
     line-height: 18px;
     width: 70%;
-    padding-bottom: 54px;
+    padding-bottom: 52px;
   }
 
   @media (min-width: @desktop-width) {
     width: 100%;
-    padding-bottom: 60px;
+    padding-bottom: 54px;
   }
 }

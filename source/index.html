@@ -10,6 +10,9 @@
   <link rel="icon" type="image/svg+xml" href="img/favicons/32.svg">
   <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="fonts/lato/lato-regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswaldmedium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswaldregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
 </head>
 
 <body class="body-main nojs">
@@ -44,7 +47,20 @@
 
     <main class="main-index">
       <div class="main-index__program-wrapper">
-        <div class="main-index__background"></div>
+        <div class="main-index__background">
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)"
+              srcset="img/background-cat-desktop.webp 1x, img/background-cat-desktop@2x.webp 2x" width="720"
+              height="694">
+            <source type="image/webp" srcset="img/background-cat-mobile.webp 1x, img/background-cat-mobile@2x.webp 2x"
+              width="320" height="302">
+
+            <source media="(min-width: 1440px)"
+              srcset="background-cat-desktop.jpg 1x, img/background-cat-desktop@2x.jpg 2x" width="720" height="694">
+            <img class="main-index__background-img" src="img/background-cat-mobile.jpg"
+              srcset="img/background-cat-mobile@2x.png 2x" alt="Кот на фоне." width="320" height="302">
+          </picture>
+        </div>
         <section class="main-index__program program">
           <h1 class="program__title">Функциональное<br>питание для котов</h1>
           <p class="program__text">Занялся собой? Займись котом!</p>
@@ -54,7 +70,8 @@
                 srcset="img/hero-desktop.webp 1x, img/hero-desktop@2x.webp 2x" width="552" height="499">
               <source type="image/webp" media="(min-width: 768px)"
                 srcset="img/hero-tablet.webp 1x, img/hero-tablet@2x.webp 2x" width="709" height="609">
-              <source type="image/webp" srcset="img/hero-mobile.webp 1x, img/hero-mobile@2x.webp 2x">
+              <source type="image/webp" srcset="img/hero-mobile.webp 1x, img/hero-mobile@2x.webp 2x" width="280"
+                height="270">
 
               <source media="(min-width: 1440px)" srcset="img/hero-desktop.png 1x, img/hero-desktop@2x.png 2x"
                 width="552" height="499">
@@ -69,7 +86,7 @@
           </button>
         </section>
       </div>
-      <section class="main-servises">
+      <div class="main-servises">
         <ul class="main-servises__list">
           <li class="main-servises__item">
             <div class="main-servises__link servise">
@@ -96,31 +113,31 @@
             </div>
           </li>
         </ul>
-      </section>
+      </div>
       <section class="general-info">
         <h2 class="general-info__title">Как это работает</h2>
         <div class="general-info__filling">
           <ol class="general-info__list">
-            <li class="general-info__item info-card--1">
-              <span class="info-card__text">
+            <li class="general-info__item general-info__item--healthy-diet">
+              <span class="general-info__text">
                 Функциональное питание содержит только полезные питательные
                 вещества.
               </span>
             </li>
-            <li class="general-info__item info-card--2">
-              <span class="info-card__text">
+            <li class="general-info__item general-info__item--soluble">
+              <span class="general-info__text">
                 Выпускается в виде порошка, который нужно лишь залить кипятком и
                 готово.
               </span>
             </li>
-            <li class="general-info__item info-card--3">
-              <span class="info-card__text">
+            <li class="general-info__item general-info__item--nutrient">
+              <span class="general-info__text">
                 Замените один-два приема обычной еды на наше функциональное
                 питание.
               </span>
             </li>
-            <li class="general-info__item info-card--4">
-              <span class="info-card__text">
+            <li class="general-info__item general-info__item--profit">
+              <span class="general-info__text">
                 Уже через месяц наслаждайтесь изменениями к лучшему<br>
                 вашего питомца!
               </span>
@@ -138,7 +155,7 @@
               в день.
             </span>
             <div class="example__wrapper">
-              <div class="example-card__filling">
+              <div class="example__filling">
                 <ul class="example__info example-card">
                   <li class="example-card__item">
                     <p class="example-card__mean">5 кг</p>
@@ -163,38 +180,62 @@
                 </ul>
               </div>
               <div class="example__conclusion">
-                <span class="example__conclusion--text">Затраты на питание:</span>
-                <span class="example__conclusion--price">15 000 РУБ.</span>
+                <span class="example__cost">Затраты на питание:</span>
+                <span class="example__price">15 000 РУБ.</span>
               </div>
             </div>
           </div>
           <div class="example__compare-slider">
-            <picture>
-              <source media="(min-width: 768px)" srcset="img/fat-cat-tablet.png" width="560" height="512">
-              <img class="example__compare-slider--fat-cat" src="img/fat-cat.png" width="280" height="256"
-                alt="Толстый кот.">
-            </picture>
-            <picture>
-              <source media="(min-width: 768px)" srcset="img/thin-cat-tablet.png" width="560" height="512">
-              <img class="example__compare-slider--thin-cat" src="img/thin-cat.png" width="280" height="256"
-                alt="Худой кот.">
-            </picture>
-            <svg class="curtain-svg curtain-svg--tablet" width="40" height="512" viewBox="0 0 40 512" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
+            <div class="example__slider-wrapper">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)"
+                  srcset="img/fat-cat-tablet.webp 1x, img/fat-cat-tablet@2x.webp 2x" width="560" height="512">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/fat-cat-tablet.webp 1x, img/fat-cat-tablet@2x.webp 2x" width="560" height="512">
+                <source type="image/webp" srcset="img/fat-cat.webp 1x, img/fat-cat@2x.webp 2x" width="280" height="256">
+
+                <source media="(min-width: 1440px)" srcset="img/fat-cat-tablet.png 1x, fat-cat-tablet@2x.png 2x"
+                  width="560" height="512">
+                <source media="(min-width: 768px)" srcset="img/fat-cat-tablet.png 1x, fat-cat-tablet@2x.png 2x"
+                  width="560" height="512">
+                <img class="example__slide example__slide--fat-cat" src="img/fat-cat.png"
+                  srcset="img/fat-cat@2x.png 2x" width="280" height="256" alt="Был толстым котом.">
+              </picture>
+            </div>
+            <div class="example__slider-wrapper">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)"
+                  srcset="img/thin-cat-tablet.webp 1x, img/thin-cat-tablet@2x.webp 2x" width="560" height="512">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/thin-cat-tablet.webp 1x, img/thin-cat-tablet@2x.webp 2x" width="560" height="512">
+                <source type="image/webp" srcset="img/thin-cat.webp 1x, img/thin-cat@2x.webp 2x" width="280"
+                  height="256">
+
+                <source media="(min-width: 1440px)" srcset="img/thin-cat-tablet.png 1x, img/thin-cat-tablet@2x.png 2x"
+                  width="560" height="512">
+                <source media="(min-width: 768px)" srcset="img/thin-cat-tablet.png 1x, img/thin-cat-tablet@2x.png 2x"
+                  width="560" height="512">
+                <img class="example__slide example__slide--thin-cat" src="img/thin-cat.png"
+                  srcset="img/thin-cat@2x.png 2x" width="280" height="256" alt="Теперь стал худым котом.">
+              </picture>
+            </div>
+            <svg class="curtain-svg curtain-svg--tablet" width="40"
+              height="512" viewBox="0 0 40 512" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect x="18" width="4" height="512" rx="2" fill="currentColor" />
               <rect x="1" y="237" width="38" height="38" rx="19" fill="white" />
               <path d="M16 247L8 256L16 265V247Z" fill="currentColor" />
               <path d="M32 256L24 247V265L32 256Z" fill="currentColor" />
               <rect x="1" y="237" width="38" height="38" rx="19" stroke="currentColor" stroke-width="2" />
             </svg>
-            <svg class="curtain-svg curtain-svg--mobile" width="40" height="512" viewBox="0 0 40 512" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <rect x="18" width="4" height="512" rx="2" fill="currentColor" />
-              <rect x="1" y="237" width="38" height="38" rx="19" fill="white" />
-              <path d="M16 247L8 256L16 265V247Z" fill="currentColor" />
-              <path d="M32 256L24 247V265L32 256Z" fill="currentColor" />
-              <rect x="1" y="237" width="38" height="38" rx="19" stroke="currentColor" stroke-width="2" />
+            <svg class="curtain-svg curtain-svg--mobile" width="40"
+              height="256" viewBox="0 0 40 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="18" width="4" height="256" rx="2" fill="currentColor" />
+              <rect x="1" y="109" width="38" height="38" rx="19" fill="white" />
+              <path d="M16 119L8 128L16 137V119Z" fill="currentColor" />
+              <path d="M32 128L24 119V137L32 128Z" fill="currentColor" />
+              <rect x="1" y="109" width="38" height="38" rx="19" stroke="currentColor" stroke-width="2" />
             </svg>
+            <span class="visually-hidden">Слайдер было стало.</span>
           </div>
         </div>
       </section>
@@ -217,6 +258,21 @@
           <iframe
             src="https://yandex.ru/map-widget/v1/?um=constructor%3A64b5a98fc7e1a5310a059b8a6228923e4e9bf7f1487f33a15f38be3012bec41d&amp;source=constructor">
           </iframe>
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)"
+              srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x" width="1440" height="400">
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="img/map-tablet.webp 1x, img/map-tablet@2x.webp 2x" width="768" height="400">
+            <source type="image/webp" srcset="img/map-mobile.webp 1x, img/map-mobile@2x.webp 2x" width="320"
+              height="362">
+
+            <source media="(min-width: 1440px)" srcset="img/map-desktop.png 1x, img/map-desktop@2x.png 2x" width="1440"
+              height="400">
+            <source media="(min-width: 768px)" srcset="img/map-tablet.png 1x, img/map-tablet@2x.png 2x" width="768"
+              height="400">
+            <img class="coop__map-nojs" src="img/map-mobile.png" srcset="img/map-mobile@2x.png 2x" width="320"
+              height="362" alt="Где мы находимся.">
+          </picture>
         </div>
       </div>
       <div class="page-footer__social-filling">
@@ -224,17 +280,20 @@
           <div class="page-footer__social-wrapper">
             <div class="page-footer__logo">
               <picture>
+                <source media="(min-width: 1440px)" srcset="img/logo-text-tablet.svg" width="143" height="26">
                 <source media="(min-width: 768px)" srcset="img/logo-text-tablet.svg" width="143" height="26">
-                <img src="img/logo-text.svg" width="128" height="24" alt="Кэт энерджи.">
+                <img src="img/logo-text.svg" width="128" height="24" alt="Логотип энерджи.">
               </picture>
             </div>
             <div class="page-footer__social social">
               <ul class="social__list">
                 <li class="social__item">
                   <a class="social__link social__link--vk" href="https://vk.ru/htmlacademy">
-                    <svg class="svg-vk" width="28" height="22">
+                    <svg class="svg-vk" width="28" height="22" role="img"
+                      aria-label="Иконка с ссылкой на канал в вконтакте ">
                       <use href="img/sprite.svg#link-vk"></use>
                     </svg>
+                    <span class="visually-hidden">Иконка с ссылкой на канал в вконтакте.</span>
                   </a>
                 </li>
                 <li class="social__item">
@@ -242,6 +301,7 @@
                     <svg class="svg-yt" width="28" height="22">
                       <use href="img/sprite.svg#link-yt"></use>
                     </svg>
+                    <span class="visually-hidden">Иконка с ссылкой на ютьюб канал.</span>
                   </a>
                 </li>
                 <li class="social__item">
@@ -249,6 +309,7 @@
                     <svg class="svg-tg" width="28" height="22">
                       <use href="img/sprite.svg#link-tg"></use>
                     </svg>
+                    <span class="visually-hidden">Иконка с ссылкой на телеграмм канал.</span>
                   </a>
                 </li>
               </ul>
@@ -256,10 +317,11 @@
           </div>
           <div class="page-footer__copyright copyright">
             <a class="copyright__link" href="https://htmlacademy.ru/">HTML Academy
-              <div class="copyright__link--logo" href="https://htmlacademy.ru/">
-                <svg class="copyright__link--logo-svg" width="27" height="34">
+              <div class="copyright__logo-container">
+                <svg class="copyright__logo-svg" width="27" height="34" role="img" aria-label="Логотип htmlacademy">
                   <use href="img/sprite.svg#copyright-logo"></use>
                 </svg>
+                <span class="visually-hidden">Логотип htmlacademy.</span>
               </div>
             </a>
           </div>

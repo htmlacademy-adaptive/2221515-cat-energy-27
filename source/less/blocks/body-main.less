@@ -1,5 +1,5 @@
 .body-main {
-  font-family: "Arial", sans-serif;
+  font-family: "oswald", "Arial", sans-serif;
   margin: 0;
   height: 100%;
 }
@@ -9,11 +9,29 @@ body {
 }
 
 .nojs {
-  & .main-nav__toggle {
+  & .page-header__toggle {
     display: none;
   }
 
+  & .coop__map {
+    & iframe {
+      display: none;
+    }
+
+    & .product-catalog__title::before {
+      display: block;
+    }
+  }
+
+  & .coop__map-nojs {
+    display: block;
+  }
+
   @media (max-width: @mobile-width-only) {
+    & .main-nav {
+      display: block;
+    }
+
     & .main-nav__list {
       position: static;
     }
